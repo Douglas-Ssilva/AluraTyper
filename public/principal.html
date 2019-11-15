@@ -3,24 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <title>Alura Typer</title>
+    <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" href="css/libs/google-fonts.css"> <!--icons-->
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <h1>Alura Typer</h1>
-    <p class="frase">Número de palavras e mais</p>
+    <div class="container">
+        <h1 class="center title">Alura Typer</h1>
+        <p class="frase center">Número de palavras e mais</p>
 
-    <ul class="infomacoes">
-        <li><span id="numeroPalavras">30</span> palavras</li>
-        <li>10 segundos</li>
-    </ul>
+        <ul class="infomacoes center">
+            <li>
+                <i class="small material-icons myAlign">assignment</i>
+                <span id="numeroPalavras">5</span> palavras
+            </li>
+            <li>
+                <i class="small material-icons myAlign">access_time</i>
+                <span id="seconds">3</span> segundos
+            </li>
+        </ul>
 
-    <textarea class="fieldType" rows="8" cols="40"></textarea>
+        <textarea class="fieldType" rows="8" cols="40"></textarea>
+        <!--<button id="reiniciarJogo" class="right" >Reniciar Jogo</button>-->
+        <a id="reiniciarJogo" class="waves-effect waves-light btn right">
+            <i class="material-icons left">refresh</i>
+            Reniciar Jogo
+        </a>
 
-    <ul class="contadores">
-        <li><span id="contadorCaracteres">0</span>  caracteres</li>
-        <li><span id="contadorPalavras">0</span> palavras</li>
-    </ul>
+    </br>
+    </br>
+      <ul class="contadores center">
+            <li>
+                <i class="small material-icons myAlign">mode_edit</i>
+                <span id="contadorCaracteres">0</span>  caracteres
+            </li>
+            <li>
+                <i class="small material-icons myAlign">cloud</i>
+                <span id="contadorPalavras">0</span> palavras
+            </li>
+        </ul>
+   
+
+        </br>
+        <section class="placar">
+            <h3 class="center">Placar</h3>
+            <table class="centered bordered">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Nº de palavras</th>
+                        <th>Remover</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                </tbody>
+            </table>
+        </section>
+</div>
 
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/placar.js"></script>
 </body>
 </html>

@@ -1,0 +1,39 @@
+.frase {
+    font-size: 20px;
+}
+
+.title {
+    color: #2bbbad;
+}
+
+.fieldType {
+    font-size: 20px;
+    font-style: italic;
+    color: blue;
+    height: 120px;
+   
+}
+
+.campo-digitacao {
+    background-color: lightgray;
+}
+
+.myAlign {
+    vertical-align: middle;
+}
+
+.borda-padrao {
+    border: 3px solid #2bbbad;
+}
+
+.borda-verde {
+    border: 3px solid green;
+}
+
+.borda-vermelha {
+    border: 3px solid red;
+}
+
+h3 {
+    color: #039be5;
+}
