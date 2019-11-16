@@ -6,11 +6,18 @@
     <link rel="stylesheet" href="css/libs/materialize.min.css">
     <link rel="stylesheet" href="css/libs/google-fonts.css"> <!--icons-->
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
 </head>
 <body>
     <div class="container">
         <h1 class="center title">Alura Typer</h1>
         <p class="frase center">Número de palavras e mais</p>
+
+        <div class="center">
+            <img src="img/spinner.gif" id="spinner" alt="Spinner">
+            <p  id="error">Ocorreu um erro, tente novamente.</p>
+        </div>
+        
 
         <ul class="infomacoes center">
             <li>
@@ -25,11 +32,22 @@
 
         <textarea class="fieldType" rows="8" cols="40"></textarea>
         <!--<button id="reiniciarJogo" class="right" >Reniciar Jogo</button>-->
-        <a id="reiniciarJogo" class="waves-effect waves-light btn right">
-            <i class="material-icons left">refresh</i>
-            Reniciar Jogo
-        </a>
-
+        <div class="botoes">
+            <button id="reiniciarJogo" class="btn waves-effect waves-light right"> Reniciar Jogo
+                    <i class="material-icons right">refresh</i>
+            </button>
+            
+            <button id="mostrarPlacar" class="btn waves-effect waves-light right"> Mostrar Placar</button>
+           
+            <a id="trocarFrase" class="btn-floating right" title="Trocar Frase">
+                <i class="material-icons">chevron_right</i>
+            </a>
+            <a id="buscarFrase" class="btn-floating" title="Trocar Frase">
+                    <i class="material-icons">search</i>
+            </a>
+            <input id="buscarFraseInput" type="number" min="0" >
+        </div>
+       
     </br>
     </br>
       <ul class="contadores center">
@@ -55,15 +73,26 @@
                         <th>Remover</th>
                     </tr>
                 </thead>
-                <tbody>
-                   
+                <tbody>          
+                             
                 </tbody>
             </table>
         </section>
+
+        </br>
+        </br>
+        <h5 id="dropdown">Menu</h5>
+        <ul id="menu">
+            <li>Massas</li>
+            <li>Carnes</li>
+            <li>Saladas e Vegetais</li>
+        </ul>
 </div>
 
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
     <script src="js/placar.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/trocarFrase.js"></script>
 </body>
 </html>

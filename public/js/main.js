@@ -9,9 +9,13 @@ $(document).ready(function(){
     contarCaracteresDigitadosTextArea();
     contarTempoDigitacao();
     compararValoresDigitadosComFrase();
-    $("#reiniciarJogo").click(reiniciarJogos);
-    
+    $("#reiniciarJogo").click(reiniciarJogos);    
 });
+
+function contarTempoFrase(tempo){
+    tempoInicial= tempo;
+    $("#seconds").text(tempo);
+}
 
 
 function contarTamanhoFrase(){
@@ -33,10 +37,11 @@ function contarCaracteresDigitadosTextArea(){
 }
 
 function contarTempoDigitacao(){
-    //fieldType.on("focus", function(){ Sempre dá foco no campo, One dá somente uma vez  
-    var tempoRestante= tempoInicial;
+    //fieldType.on("focus", function(){ Sempre dá foco no campo, One dá somente uma vez      
 
     fieldType.one("focus", function(){
+        var tempoRestante= $("#seconds").text();
+        $("#reiniciarJogo").attr("disabled",true);
         var idInterval= setInterval(function(){
             tempoRestante--;
             $("#seconds").text(tempoRestante);
@@ -53,23 +58,31 @@ function contarTempoDigitacao(){
 function finalizarJogo(){
     fieldType.toggleClass("campo-digitacao"); //fieldType.css("background-color", "campo-digitacao");
     fieldType.attr("disabled", true);
+    $("#reiniciarJogo").attr("disabled", false);
+    $(".placar").slideDown(600);
     salvarPlacar();  
+    scrollPlacar();
 }
 
 function reiniciarJogos(){
 //reiniciarJogo.on("click", function(){
-    //Podemos usar assim com as funções mais usadas
+//Podemos usar assim com as funções mais usadas
     fieldType.val("");
     fieldType.attr("disabled", false);
     $("#contadorPalavras").text("0");
     $("#contadorCaracteres").text("0");
+    //var tempoFraseCurrent= $("#seconds").text();  
     $("#seconds").text(tempoInicial);
+    addRemoveClass();
+    contarTempoDigitacao();
+}
+
+function addRemoveClass(){
     fieldType.removeClass("borda-verde"); 
     fieldType.removeClass("borda-vermelha"); 
     fieldType.addClass("borda-padrao");
    // fieldType.removeClass("campo-digitacao"); toggle se tiver com a class tira, senao coloca
     fieldType.toggleClass("campo-digitacao");
-    contarTempoDigitacao();
 }
 
 

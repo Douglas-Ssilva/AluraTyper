@@ -37,3 +37,41 @@
 h3 {
     color: #039be5;
 }
+
+body {
+    overflow: scroll;/*Reserva um espaço p barra de rolagem, assim nao afasta a page*/
+}
+
+.btn {
+    margin: 3px;
+}
+
+.placar {
+    display: none; /*Faz desaparecer o componente*/
+}
+
+.menu {
+    display: none;
+}
+
+#error {
+    font-size: 14px;
+    color: red;
+    font-weight: bold;
+    display: none;
+}
+
+#spinner {
+    display: none;
+}
+
+.btn-floating {
+    margin: 3px;
+}
+
+#buscarFraseInput {
+    width: 7%;
+    margin-left: 5px;
+    background-color: #64beb5;
+    height: 30px;
+}
