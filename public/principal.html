@@ -13,9 +13,10 @@
         <h1 class="center title">Alura Typer</h1>
         <p class="frase center">Número de palavras e mais</p>
 
-        <div class="center">
+        <div class="center"> 
             <img src="img/spinner.gif" id="spinner" alt="Spinner">
             <p  id="error">Ocorreu um erro, tente novamente.</p>
+            <p  id="success">Placar salvo com sucesso.</p>
         </div>
         
 
@@ -42,10 +43,14 @@
             <a id="trocarFrase" class="btn-floating right" title="Trocar Frase">
                 <i class="material-icons">chevron_right</i>
             </a>
+            <a id="sincronizarPlacar" class="btn-floating" title="Sincronizar Placar">
+                <i class="material-icons">forward_10</i>
+            </a>
             <a id="buscarFrase" class="btn-floating" title="Trocar Frase">
                     <i class="material-icons">search</i>
             </a>
-            <input id="buscarFraseInput" type="number" min="0" >
+            <input id="buscarFraseInput" type="text" maxlength="2">
+             
         </div>
        
     </br>
@@ -81,12 +86,14 @@
 
         </br>
         </br>
-        <h5 id="dropdown">Menu</h5>
-        <ul id="menu">
-            <li>Massas</li>
-            <li>Carnes</li>
-            <li>Saladas e Vegetais</li>
-        </ul>
+        <div class="menuDrop">
+            <h5 id="dropdown">Menu</h5>
+            <ul id="menu">
+                <li>Massas</li>
+                <li>Carnes</li>
+                <li>Saladas e Vegetais</li>
+            </ul>
+        </div>
 </div>
 
     <script src="js/jquery.js"></script>

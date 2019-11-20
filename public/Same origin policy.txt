@@ -1,0 +1,19 @@
+Same origin policy(caracteristicas dos browsers e servers, browsers bloqueiam request pra servers que nao são da mesma origem do meu) -> por default não podemos fazer uma request 
+pra outro server,  por isso se eu hospedar minha aplicação em uma máquina na minha rede local e tentar fazer o mesmo ajax que executo da minha máquina não funciona.
+
+Mesma origem(mesmo host, mesma porta, mesmo protocolo): localhost -> 192.168.0.125, não deixa. Pra uma outra porta, ainda que no meu local também não deixa.
+
+No mundo sem o same origin era possível eu criar um site: www.caixq.com.br e mandar por baixo dos panos, requests ao site original da caixa, e este me retornaria
+a conta do user  que tentou acessar.
+
+CORS- Cross Origin Resource Sharing- config que fazemos no nosso server p permitir requests somente de certas origens.
+No cabeçalho na resposta HTTP do server consigo definir de quais sites posso receber requests. Ex: Access-Control-Allow-Origin: http://localhost:3000, http://192.168.0.83:3000
+Essa forma de permitir chamar uma outra origem também é chamado de Cross-Origin Resource Sharing ou CORS.
+
+No nosso caso escrevemos a aplicação servidora em node.js (JavaScript) usando o framework Express. Para habilitar CORS com Express basta utilizar:
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "http://localhost:3000, http://192.168.0.83:3000");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});

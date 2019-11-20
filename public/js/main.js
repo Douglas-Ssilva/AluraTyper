@@ -10,6 +10,7 @@ $(document).ready(function(){
     contarTempoDigitacao();
     compararValoresDigitadosComFrase();
     $("#reiniciarJogo").click(reiniciarJogos);    
+    updatePlacar();
 });
 
 function contarTempoFrase(tempo){

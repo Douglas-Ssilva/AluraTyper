@@ -53,6 +53,9 @@ body {
 .menu {
     display: none;
 }
+.menuDrop {
+    display: none;
+}
 
 #error {
     font-size: 14px;
@@ -74,4 +77,10 @@ body {
     margin-left: 5px;
     background-color: #64beb5;
     height: 30px;
+}
+
+#success {
+    display: none;
+    color: green;
+    font-weight: bold;
 }
