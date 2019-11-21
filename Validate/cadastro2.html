@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script>
+    $(function(){
+        $("#form-cadastro").validate({
+            rules : {
+                nome : {
+                    required : true
+                },
+                login : {
+                    required : true
+                },
+                senha : {
+                    required : true,
+                    minlength : 6
+                },
+                confirmasenha : {
+                    required : true,
+                    minlength : 6,
+                    equalTo : "#senha"
+                }
+            },
+            messages : {
+                nome : {
+                    required : "Por favor, informe seu nome."
+                },
+                login : {
+                    required : "É necessário informar um login."
+                },
+                senha : {
+                    required : "Informe uma senha.",
+                    minlength : "A senha deve possuir pelo menos 6 caracteres."
+                },
+                confirmasenha : {
+                    required : "Confirme a senha.",
+                    minlength : "A senha deve possuir pelo menos 6 caracteres.",
+                    equalTo : "A confirmação deve ser igual à senha."
+                }
+            }
+        });
+    });
+    </script>
+</head>
+<body>
+    <div id="form-container">
+        <div class="panel" id="form-box">
+            <form action="cadastro.php" method="post" id="form-cadastro">
+                <h1 class="text-center">Cadastre-se</h1>
+
+                <div class="form-group">
+                    <label class="sr-only" for="nome">Nome</label>
+                    <input type="text" id="nome" class="form-control" placeholder="Seu nome">
+                </div>
+
+                <div class="form-group">
+                    <label class="sr-only" for="login">Usuário</label>
+                    <input type="text" name="login" class="form-control" placeholder="Seu login de usuário">
+                </div>
+
+                <div class="form-group">
+                    <label class="sr-only" for="senha">Senha</label>
+                    <input type="password" name="senha" id="senha" class="form-control" placeholder="Digite sua senha">
+                </div>
+
+                <div class="form-group">
+                    <label class="sr-only" for="senha">Confirme a senha</label>
+                    <input type="password" name="confirmasenha" class="form-control" placeholder="Confirme sua senha">
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Cadastrar" id="btn-submit" class="btn btn-primary form-control">
+                </div>
+
+                <div class="form-group">
+                    Já é registrado? <a href="login.html">Efetue login</a>.
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
