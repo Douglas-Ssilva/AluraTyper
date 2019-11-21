@@ -1,7 +1,7 @@
 $("#mostrarPlacar").click(mostrarPlacar);
 
 function salvarPlacar(){
-    var user= 'Douglas';
+    var user= $('#usuarios').val();
     var pontuacao= fieldType.val().length;
     var tbodyTable= $(".placar").find("tbody");
     var linha= createElements(user, pontuacao);

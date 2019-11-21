@@ -84,3 +84,14 @@ body {
     color: green;
     font-weight: bold;
 }
+
+#usuarios { /*por default, materialize deixa os selects none*/
+    display: block;
+}
+
+.selectize-input {
+    width: 150px !important;
+    vertical-align: middle;
+}
+
+

@@ -11,6 +11,13 @@ $(document).ready(function(){
     compararValoresDigitadosComFrase();
     $("#reiniciarJogo").click(reiniciarJogos);    
     updatePlacar();
+    $("#usuarios").selectize({
+       create: true,
+        sortField: 'text'
+    });
+    $('#usuarios2').selectize({
+        maxItems: 3
+    });
 });
 
 function contarTempoFrase(tempo){

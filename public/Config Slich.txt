@@ -1,0 +1,7 @@
+1- Criar class na div de imagens
+2- Baixar o plugin e copiar pasta a nivel das css e js
+3- Import do css: 
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+4- crias js
