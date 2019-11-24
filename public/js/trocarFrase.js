@@ -69,15 +69,22 @@ function sincronizarPlacar(){
         
     $.post('http://localhost:3000/placar', dados, function(){
         $('#success').show();
+        $('.tooltip').tooltipster("open");
         setTimeout(function(){
-            $('#success').slideToggle(600);
+            $('#success').slideToggle(600);          
         }, 2000);
     })
     .fail(function(){
         $("#error").show();
+        $('.tooltip').tooltipster("open").tooltipster("content", "Falha ao sincronizar os dados.");
         setTimeout(function(){
-            $("#error").slideToggle(600);
-        }, 1500);
+            $("#error").slideToggle(600);           
+        }, 1200);
+    })
+    .always(function(){
+        setTimeout(function(){
+            $('.tooltip').tooltipster("close");
+        }, 3000);
     });
 }
 

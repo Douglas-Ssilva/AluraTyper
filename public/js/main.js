@@ -2,29 +2,40 @@ var fieldType= $(".fieldType");
 var tempoInicial= $("#seconds").text();
 
 //$(function(){});
-$(document).ready(function(){
-    //console.log('Carreguei');
+$(document).ready(function(){    
     fieldType.addClass("borda-padrao");
     contarTamanhoFrase();
     contarCaracteresDigitadosTextArea();
     contarTempoDigitacao();
     compararValoresDigitadosComFrase();
-    $("#reiniciarJogo").click(reiniciarJogos);    
+    ativarTootipster();    
     updatePlacar();
-    $("#usuarios").selectize({
-       create: true,
-        sortField: 'text'
-    });
-    $('#usuarios2').selectize({
-        maxItems: 3
-    });
+    iniciarSelectizer();    
+    $("#reiniciarJogo").click(reiniciarJogos);   
 });
+
+function iniciarSelectizer(){
+    $("#usuarios").selectize({
+        create: true,
+         sortField: 'text'
+     });
+     $('#usuarios2').selectize({
+         maxItems: 3
+     });    
+}
 
 function contarTempoFrase(tempo){
     tempoInicial= tempo;
     $("#seconds").text(tempo);
 }
 
+function ativarTootipster(){
+    $(".tooltip").tooltipster({
+        trigger: "custom",
+        theme: 'tooltipster-punk',
+        animation: 'fade' 
+    });
+}
 
 function contarTamanhoFrase(){
     var frase= $(".frase").text();
