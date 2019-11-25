@@ -1,0 +1,31 @@
+$(elemento).acao -> executar uma ação no elemento
+$.acao -> chamando uma função específica do jquery
+
+$('elemento')
+jQuery('elemento')
+
+var atalho= jQuery.noConflict();
+atalho('elemento'); evitando conflitos com outras bibliotecas
+
+$('elemento').text(); troco somente texto
+$('elemento').html('<h1>Posso passa elementos</h1>');
+
+$('button') - seleciona todas tags que possuem essa tag
+$('.class') - todos elemntos que tem essa class
+
+$('li.class') - selecionando o li que tem a class X
+
+$('#lista2 li.class')
+
+Verificando se possui a tag na pagina, console: 
+if($('button').length > 0){
+
+}
+
+Mudando atributos: 
+$('a').attr('href', 'google.com.br')
+$('img').attr('width', 200);
+
+Lendo atributos: 
+$('img').attr('width');
+$('img').attr('src');

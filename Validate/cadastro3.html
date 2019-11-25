@@ -16,11 +16,11 @@
                 },
                 login : {
                     required : true,
-                    remote : {
+                    remote : { //valida no banco se já existe esse login
                         url : "validar-login.php",
                         type: "post",
                         data : {
-                            login : function(){
+                            login : function(){ //nome do atributo é login, e  o valor é o retorno
                                 return $("#login").val();
                             }
                         }

@@ -9,9 +9,9 @@
     <script src="js/jquery.validate.min.js"></script>
     <script>
     $(function(){
-        $("#form-cadastro").validate({
+        $("#form-cadastro").validate({ //Não usa os atributos do HTML5
             rules : {
-                nome : {
+                nome : { //name dos inpus
                     required : true
                 },
                 login : {
