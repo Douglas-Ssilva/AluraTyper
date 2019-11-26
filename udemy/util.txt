@@ -29,3 +29,25 @@ $('img').attr('width', 200);
 Lendo atributos: 
 $('img').attr('width');
 $('img').attr('src');
+
+$('elemento').html('Troocando texto');
+$('elemento').text('Troocando texto'); -> troca somente texto
+$('elemento').html('<h1>Troocando texto</h1>');
+
+$('#elemento').find('button'); pegando elemento que esta dentro do elemento
+
+.addClass('class') -> adicionando class
+
+$('elemento').val(); -> get value input
+$('elemento').attr('value', 'New elemento');
+$('elemento').text(); -> pegando de tags que possuem value dentro
+
+$('elemento').after('<div>Texto</div>'); -> add apos o elemento
+$('elemento').before('<div>Texto</div>'); -> antes
+
+$('ul').append('<li>Item da lista add</li>')
+prepend -> add antes
+
+$('elemento').remove();
+
+
