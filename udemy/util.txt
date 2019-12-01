@@ -50,4 +50,35 @@ prepend -> add antes
 
 $('elemento').remove();
 
+var elemento= document.getElementById('div');
+ $(elemento).html(); -> transformando elemento html em jQuery
+
+ $('li:eq(1)') -> pegando o segundo item da lista
+$('li').eq(1); mesma coisa
+
+$('elemento').parent(); -> pegando elemento pai
+$('elemento').parent().parent(); avo
+
+$('elementoPai').find('elementoFilho');
+
+$('e').closest('.topo'); em situações que não sei quantas div tenho até pegar essa class. Só consegue achar se o elemento foi elementoFilho
+$('e').closest('.elementoQueEnglobaOForaDaHierarquia'); pegando elemntos que estão fora da hierarquia
+
+.find -> busca somente dentro do elemento
+dar preferencia p closest a inves do parent, pois ele vai no elemento direto
+
+.closest -> busca pra cima, os pais
+
+Estilizando com css: 
+
+$('h1').addClass('nomeClass');
+$('h1').removeClass('nomeClass');
+$('h1').hasClass('nomeClass'); boolean
+$('h1').css('color', 'red');
+Posso encadear as chamadas .css
+
+Aula 13
+
+
+
 

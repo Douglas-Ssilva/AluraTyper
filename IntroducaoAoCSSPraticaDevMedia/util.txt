@@ -1,0 +1,52 @@
+cursor: pointer; -> mãozinha ao mover mouse no elemento
+tudo que está entre chaves, falamos que é uma regra.
+a {
+    color: red;
+}
+Para o seletor a, aplicamos essa regra.
+
+Seletor de id= #{}
+Seletor de class .{}
+
+Cor em hexadecimal= #ffffff(vermelho, verde e azul, azul= ff)
+
+Falamos que o elemento que contém outro dentro é o container do elemento filho.
+
+#banner nav ul li{
+    selecionando a div banner, todas as nav que contem ul e li
+}
+
+Taxado no console quer dizer que a propriedade foi sobrescrita.
+Sempre que quisermos alterar, pegamos o elemento direto que sobrescreve os demais css aplicados
+
+O elemento H1 possui o display block que faz com que o espaço na horizontal disponivel seja ocupado
+padding espaço entre o conteúdo do elemento e suas bordas
+margin espaço entre o elemento e os que estão ao seu redor
+Box model -> todo elemento que é renderizado no browser possui um padding, border e margin por default. Quando uso margin: 0; 
+    Anulo essa margin padrão
+
+No console, ao inspecionar o elemento, na aba computer, nos mostra os valores default 
+Tomar cuidado com display inline, pois ele desconsidera dimensões de altura e largura dos elementos. Assim o navegador não consegue centralizar os elementos
+
+
+
+
+top: 30px; do seu container. Top, rigth, left e bottom só podemos usar quando os elementos estão com position
+position: relative; -> relativo ao container que está contido
+float: right; -> pegando o container
+text-decoration: none; -> remove sublinhado link
+display: inline; -> itens da lista na horizontal, desconsidera width
+display: inline-block; -> considera width. Elemento não ocupa a linha inteira
+text-transform: uppercase;
+padding: 10px() 20px 5px 1px; (Top, right Bottom, left)  -> add espaço no interior do elemento
+font-weight: bold;
+font-family: 'Helvetica Neue', sans-serif;
+text-align: center;
+color: red; -> cor do texto
+width: 80%; -> digo ao browser que o tamanho será esse em relação ao tamanho da tela
+margin: 0(Top e Bottom) auto(right e left); -> calcule de forma automatica(Inspeção borda laranja é a auto)
+border-collapse: collapse; -> remove o espaçamento entre TDs
+display: block; faz com que o elemento ocupe toda a linha. 
+line-height: 6; -> exclusiva p elementos de texto, seu calculo é com base no tamanho da fonte, assim caso alteremos o tamanho da fonte, a altura permanecerá compatível
+background-repeat: no-repeat; -> informo p imagem quando acabar não se repetir
+background-size: contain; -> ajuste da imagem ao fundo da page
