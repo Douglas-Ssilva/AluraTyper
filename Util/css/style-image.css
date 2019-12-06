@@ -1,0 +1,29 @@
+body {
+    margin: 0px;
+    padding: 0px; /*Tira espaçamento padrão do navegador*/
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    width: 50%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.header {
+    display: flex;
+}
+
+/*centralizando elementos*/
+.text {
+    width: 50%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+

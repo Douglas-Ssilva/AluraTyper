@@ -1,0 +1,85 @@
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+h1, h2, h3 {
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+p {
+    color: #333;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    line-height: 1.8em; /*Alterando a altura da linha, com base no font-size*/
+}
+
+ul li {
+    list-style: none; /*retirando as bolinhas*/
+}
+
+ul li a {
+    color: #000bff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.8em;
+    text-decoration: none; /*remove sublinhado*/
+}
+
+footer {
+    font-size: 12px;
+}
+
+.menu {
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+.menu li {/*li por default é display block, ocupa todo espaço vertical*/
+    display: inline;
+    margin-right: 5px;
+}
+
+.menu a { /*Definindo no link p área dele ficar maior*/
+    background: #818181;
+    border: 1px solid #575757;
+    color: #fff;
+    padding: 5px;
+}
+
+.wrapper {
+    margin: 0 auto; /*zerando a margin superior e inferior do elemento*/
+    width: 60%;
+}
+
+.content {
+    border: 2px solid #13ff00;
+    border-left: none; /*ocultando as bordas left e rigth*/
+    border-right: none;
+}
+
+.article-date {
+    font-size: 12px;
+    font-style: italic;
+}
+
+.contact-us {
+    padding: 0;
+}
+
+.contact-us li {
+    display: inline; /*um ao lado do outro*/
+    margin-right: 5px;
+}
+
+.contact-us li a {
+    color: #333;
+}

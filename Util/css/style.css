@@ -1,0 +1,153 @@
+@keyframes bounce {
+    0%, 20%, 60%, 100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+    80% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+}
+
+.btns {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.effect {
+    border: none;
+    color: #fff;
+    padding: 20px;
+    margin: 10px;
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 10px;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 400ms ease;
+}
+
+.effect1 {
+    background-color: #28348A;
+}
+
+.effect1:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 64px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    transition: all 2s ease;
+    
+}
+
+.effect1:hover:before { /*quando o mouse estiver em cima, pegue as info do :before e complete de 0 ate 100%*/
+    width: 100%;
+}
+
+.effect2 {
+    background-color: #772150;
+}
+
+.effect2:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 0px;/*será completada no hover*/
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    transition: all 2s ease;
+    
+}
+
+.effect2:hover:before { 
+    height: 64px;
+}
+
+.effect3 {
+    background: #009c3d;
+}
+
+.effect3:hover { 
+    background: rgba(0, 0, 0, 0); /*fundo*/
+    color: #009c3d; /*color letra*/
+    box-shadow: inset 0 0 0 3px #009c3d; /*color border*/
+}
+
+.effect4 {
+    background: #f18f01;
+}
+
+.effect4:hover {
+    animation: bounce 1s;
+}
+
+.effect5 {
+    background: lightgray;
+}
+
+.effect5:hover {
+    transform: skew(-10deg);
+}
+
+.effect6 {
+    background: lime;
+    transform-style: preserve-3d;
+}
+
+.effect6:after {
+    top: -100%;
+    left: 0px;
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    background: #3a9999;
+    border-radius: 10px;
+    box-sizing: border-box;
+    content: 'Alter';
+    transform-origin: left bottom;
+    transform: rotateX(90deg);
+}
+
+.effect6:hover {
+    transform-origin: center bottom;
+    transform: rotateX(-90deg) translateY(100%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

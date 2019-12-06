@@ -1,0 +1,54 @@
+p {
+	font: 14px/22px "Helvetica Neue", arial, sans-serif;
+}
+
+/*p:first-of-type { 
+	background: #eee;
+}  Pega o primeiro elemento desse tipo e aplique essa regra, assim não preciso usar class*/
+
+p:nth-of-type(2n+1) { /* (1)- aplica no priomeiro elemento, (2)no segundo 2n+1 -> sempre pulará um*/
+	background: #eee;
+}
+
+tr:nth-of-type(2n+1) {
+	background: #eee;
+}
+
+input:disabled, 
+input:read-only {
+	background: #eee;
+	border:  1px solid #222;
+	cursor: not-allowed; /*aparecendo a bolinha vermelha*/
+}
+
+input:checked + label { /*Quando for marcado, altere o valor do label proximo*/
+	color: green;
+}
+
+input:disabled {
+	border: 1px solid red;
+}
+
+input:not(:disabled) {
+	border: 1px solid green;
+}
+
+input:last-of-type { /*pegando o ultimo input*/
+	font-style: italic;
+}
+
+p:nth-child(even) {
+	background: #eee;
+}
+/*p:nth-last-child(2) começa a contar do ultimo elemento, assim pega o penultimo*/ 
+p:nth-last-child(odd) {/*even = par, odd impar de baixo p cima*/
+	background: #eee;
+}
+
+p:nth-last-of-type(2n+1) {
+	background: #eee;
+}
+
+p:nth-last-of-type(-n+2) {
+	background: #eee;
+}
