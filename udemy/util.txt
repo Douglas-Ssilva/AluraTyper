@@ -77,6 +77,199 @@ $('h1').hasClass('nomeClass'); boolean
 $('h1').css('color', 'red');
 Posso encadear as chamadas .css
 
+$('li > ul'); pegando filhos
+$('#item1 ~ li') pegando irmãos do elemento. O + pega o irmao mais proximo
+
+Seletores: 
+$('tbody tr:first')- primeira tr
+$('tbody tr:not (tbody tr:first')- aplicando em todas, exceto na primeira
+$('tbody tr:evem')- pares
+$('tbody tr:odd')- impares
+$('tbody tr:eq(3)')- aplique nesse indice
+$('tbody tr:lt(2)')- aplica nos menores que 2
+
+Seletores de conteúdo: 
+$('td:contains(EsseTexto)')- buscando as td que contain esse texto
+$('td:empty')- celulas vazias
+$('td:not(td:empty)')- celulas que nao estão vazias
+$('td:has(strong)')- celulas que tem uma tag
+
+$('a[name=menu]'); link que tem o atributo name com value Menu
+$('a[href*=min]');- elemento que contem o value min no href
+
+Seletores de form
+
+$(':button');
+$(':button').next() | .parent() .previus(); recuperando elementos proximos
+:input -> seletor generico de input
+:text
+:button
+:password
+:radio
+:checkbox
+select
+textarea
+:submit
+:reset
+:file
+:enabled -> seleciona todos elementos que estão habilitados
+:checked
+:selected -> os que estão selecionados
+
+
+Manipulando atributos
+
+attr();
+removeAttr();
+addClass();
+hasClass();
+removeClass();
+toggleClass();
+
+$('img').attr({
+    src: "caminho",
+    title:""
+});
+
+Manipulando de conteudos: 
+
+html(); -> posso passar uma Tag
+text();
+val();
+replaceWith(); -> troca um elemento por outro
+$('div').replaceWith(<p>TEste</p>);
+
+Podemos usar do encademento de metodos no jQuery
+
+Manipulando o DOM, criando elemento
+
+var img= $('<img/>', {
+    src: 'caminhoIMG',
+    title:'Imagem'
+    click: function({
+        alert('clicou na img')
+    });
+});
+$('body').append(img);
+
+
+Manipulando o DOM, inserindo à arvore
+
+append(); dentro na ultima posição
+prepend(); dentro na primeira posição
+after(); fora e apos o elemento
+before(); fora e antes do inicio do elemento
+wrap(); envolve com outro elemento
+clone(); faz uma cópia do elemento
+
+$('ul').append('<li>Dentro da UL na ultima posição</li>');
+$('ul').before('<h1>Fora e antes do inicio da ul</h1>');
+$('ul').wrap('<div>Envolvendo a ul em uma div</div>');
+$('ul').append($('li').clone()); add à ul todas as li que encontrar
+
+
+Manipulação do DOM: remoção
+remove();  remove elementos alvos
+empty();    limpa elementos internos
+unwrap(); remove o elemento envolvente, exclui o container
+
+
+
+Manipulação de CSS
+css(); atribui e recupera valores
+hasClass();
+removeClass();
+addClass();
+
+Posicionamento
+offset();
+position();
+
+Dimensões
+width();
+height();
+
+$('img').width(); largura da img
+$('img').innerWidth(); largura img + padding
+$('img').outerWidth(); largura + padding + borders (true) -> retorna as margins pós bordas
+
+$('img').position().top(); altura do elemento em relação à janela
+$('img').position().left();
+$('img').offset().top();    altura e largura das margins de impressão
+$('img').offset().left();
+
+
+Eventos de mouse
+click(); 
+dblclick(); clique duplo
+mousedown(); segurando o button do mouse
+mouseenter(); ao entrar no elemento
+mouseleave(); ao sair do elemento
+mousemove(); movimentando o cursor do mouse, posso extrair a position do cursor
+mouseout(); quando saio do elemento
+mouseover(); ao passar mouse por cima do elemento
+mouseup(); soltando o button do mouse
+
+
+Eventos de Teclado e de Formulários
+
+$(':text').keyup(function({
+    $('#msg').text($(this).val());
+}));
+
+keypress -> o evento ocorre quando a tecla está pressionada.
+keydown ->  o evento ocorre quando a tecla é pressionada.
+keyup -> quando solta tecla
+A diferença entre keydown() e keypress() está que o segundo não é capturado quando as teclas Ctrl, Alt ou Shift são pressionadas.
+
+Form
+
+$(':text').focus(function({
+    $('#msg').text($(this).css('background', 'green'));
+}));
+
+blur -> cursor saindo do elemento
+submit -> ao submeter o form
+change -> quando um valor é selecionado no select
+
+//validação de form
+$('form').submit(function(){ 
+     if($(':text').val() == 'XTI'){
+         return true;
+     }
+     return false;
+});
+
+Saber se o select foi alterado:
+$('select').change(function(){
+    var escolha= $('option:selected').text();
+});
+
+quando houve uma seleção dos valores do input
+$('textarea').select(function(){
+    alert();
+});
+
+
+Eventos Avançados
+bind();
+unbind(); -> dezassociando evento do elemento
+trigger(); -> um input já tem o evento de focus, com essa função consigo fazer esse evento ocorrer sem que interaja com o input em questão
+
+$(':text').bind("keyup", function({
+    $('#msg').text($(this).val());
+}));
+
+$(':text').bind("keyup blur focus", function);
+$(':text').keyup(function).focus(otherFunction);
+
+$(':button').bind('click', function({
+    $(':text').unbind('keyup', function);
+}));
+
+Aula 18 12
+
+
 Aula 13
 
 

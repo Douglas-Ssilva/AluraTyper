@@ -1,0 +1,51 @@
+max-width -> valor máximo de altura, há o min também.
+valores do padding e margin segue sentido horário -> top, rigth, bottom, left
+É válido ressaltar que quando definimos um width ou heigth, temos que considerar o padding que demos ao elemento e somar com o respectivo lado.
+margin (espaçamento externo)
+padding (espaçamento interno)
+color -> define a cor do texto
+text-align -> alinhamento do texto
+text-decoration -> linhas em baixo, em cima, taxado sobre o texto (default none)
+text-transform -> uppercase
+text-indent 20px-> recuo da primeira linha. 
+line-heigth -> altura da linha
+direction ltr ou rtl; -> texto da direita p esquerda ou vice versa
+letter-spacing 2px -> espaço entre as palavras
+text-shadow: 3px 3px 4px red; -. sombra p texto(horizontal, vertical, desfoque)
+box-sizing: border-box; -> tira o espaçamento a mais que o padding causou no width, normalmente usamos essa regra no seletor universal
+box-shadow: 10px 10px 5px green; -> add sombra ao elemento
+overflow: (visible é o default; hidden esconde o que excede, scroll add barra de rolagem, auto add barra de rolagem somente onde precisa) 
+    quando as informações são dinamicas, e recebo do BD informações grandes, ele resolve
+opacity: 0 a 1 -> nivel de transparencia do elemento
+font-family: Arial, Verdana, sans-serif;  -> procura o arial, caso nao ache, pegue Verdana, caso nao a fonte generica
+font-weigth: bold, italic
+fontes externas: fontsquirrel.com, baixo a fonte e install. Depois vou em generator no site mesmo, e converto a fonte p woff(formato de fontes adequados p web) colar na pasta do projeto.
+@font-face{
+    font-family: open_sans; /*no elemento passo esse nome*/
+    src: url(caminho.woff)
+}
+Google fonts também consigo fazer isso: basta add o link no html e definir no elemento
+rgb ou rgba(opacidade) podemos usar nas cores
+background: linear-gradient(to right|left|top|top left|80deg, red ,blue|rgba(255,255,0, 0.5), green) -> direção do gradiente
+background: radial-gradient(red, green) -> tem como base o centro
+float -> pra que um elemento fique ao lado outro preciso declarar rigth em um e left no outro
+position: -> p usar o left é necessário sua declaração
+Precisamos colocar position relative no pai, assim o elemento se moverá dentro do pai
+position: fixed -> permanece fixo na página, se posiciona conforme o navegador
+border-style: solid ->
+border-width: tamanho da borda
+border: solid 5px red;
+border-top: -> aplica  aborda somente na direção especificada  
+:hover -> controla o estado do elemento quando passamos por cima com mouse
+transition-property: width; 
+transition-duration: 2s;
+transition-timing-function: ease; (efeitos da transição)
+transition-delay: 2s
+==transition width 2s linear 2s, heigth 2s ease;
+all -> no lugar da propriedade em si, aplica p todas propriedades daquele elemento
+background-color: cor de fundo
+background-image: url(caminho);
+background-repeat: no-repeat;
+
+
+

@@ -1,0 +1,21 @@
+* {/*seletor universal, todos os itens terão essas regras, normalmente se usa p darmos efeito inicial na pagina*/
+    margin: 10px;
+}
+
+.container {
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 100px;
+}
+
+input[name="nameButton"] {
+    width: 100px;
+}
+
+h1, h2, h3 {
+    width: auto;/*agrupamento de seletores*/
+}
+
+
