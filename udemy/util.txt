@@ -253,7 +253,7 @@ $('textarea').select(function(){
 
 Eventos Avançados
 bind();
-unbind(); -> dezassociando evento do elemento
+unbind(); -> desassociando evento do elemento
 trigger(); -> um input já tem o evento de focus, com essa função consigo fazer esse evento ocorrer sem que interaja com o input em questão
 
 $(':text').bind("keyup", function({
@@ -266,11 +266,61 @@ $(':text').keyup(function).focus(otherFunction);
 $(':button').bind('click', function({
     $(':text').unbind('keyup', function);
 }));
+$(':text').trigger('focus'); 
 
-Aula 18 12
+Novos elementos criados depois de já ter declarado o bind, página já foi carregada , não pegam o evento.
+Assim uso a function delegate(); que faz com que os elementos recebam os Eventos
+$('table').delegate(':text', 'keyup', function); -> dentro da table, todos os campos que forem construídos depois do carregamento
+da pagina, receberam esse evento
+
+undelegate(); - remove Eventos
+
+Disparando um event:
+$(':button').bind('click', function(e, src, width){
+    $('#box').append($('<img/>').attr('src', src).css('width', width));
+});
+$(':button').trigger('click', ['caminho/imagem', '90px']);
+
+Efeitos básicos
+
+hide();
+show();
+toggle(); -> alterar estados
+
+hide('show');
+hide('normal');
+hide('fast');
+hide(1000); ms
+
+Efeitos Slide Corrediços e Fade(Opacidade)
+fadeIn(); deixa opaco, volta com elemento
+fadeOut(); deixa transparente, some elemento
+fadeTo(); atinge certa opacidade fadeTo(1000, 0.3); chega a 30% de opacidade
+fadeToggle(); ora aparece, ora some
+
+slideUp(); fecha p cima
+slideDown(); abre p baixo
+slideToggle(); 
+Todas essas functions aceitam os param declarados acima
+
+$('tbody tr:odd').assClass('impar');
+$('tbody tr:nth-child(2n+1)').assClass('impar');- podemos passar equação
+
+Destacar Linhas de uma Tabela
+
+$('tbody tr').hover(function(){ quando passa o mouse por cima da tr
+    $(this).addClass('destaque')//color
+}, function(){
+    $(this).removeClass('destaque')
+}); 
 
 
-Aula 13
+Destacar Colunas de uma Tabela
+
+
+
+
+Aula 13 udemy
 
 
 
