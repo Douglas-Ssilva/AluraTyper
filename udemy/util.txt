@@ -317,8 +317,59 @@ $('tbody tr').hover(function(){ quando passa o mouse por cima da tr
 
 Destacar Colunas de uma Tabela
 
+$('table thead tr th').each(function(index){
+	$(this).bind('click', function(){alert(index)});
+});
 
+$('table thead tr th').not('tr:first-child').prepend('<span>+</span>').css('cursor','pointer');
+$('table thead tr th').each(function(index){
+    var n= index - 1;
+	$(this).click(function(){
+        $('td').removeClass('destaque'); -> removendo marcação de todas TDs
+        $(this).parents('thead').siblings('tbody').children('tr').each(function(){
+            $(this).children('td:eq('+n+')').addClass('destaque'); //filhos que sejam td e que estejam na posiçao N
+        });
+    });
+});
 
+ToolTips Destacar Células de uma Tabela
+
+$('td').hover(function(){
+    $(this).addClass('destaque').prepend('<div class='tooltip'>Testando</div>');
+}, function(){
+    $(this).removeClass('destaque');
+    $('.tooltip').remove();  //pego todos elementos com essa classe e removo
+});
+
+.tooltip{
+    width: 180px;
+    padding: 2px 4px;
+    margin-top: 25px;
+    border: 1px solid #000;
+    color: #000;
+    background: #DDD;
+    position: absolute;
+}
+
+Mostrando nome da coluna e valor da Célula
+$(table thead tr th).each(function(index){
+    var n = index + 1;
+    var nomeColuna= $(this).text();
+
+    $('tr td:nth-child('+ n +')').hover(function(){ //pegando as td que estejam na posição do titulo
+        var nomeCelula= $(this).text();
+          $(this).addClass('destaque').prepend('<div class='tooltip'>nomeColuna + nomeCelula</div>');
+          // selecionando td que contem valores iguais
+          $(this).click(function(){
+            $('tbody tr').removeClass('destaque');
+            $('.tooltip').remove();
+            $('tbody tr:contains('+ nomeCelula +')').addClass('destaque');
+          });
+    }, function(){
+    $(this).removeClass('destaque');
+    $('.tooltip').remove();  //pego todos elementos com essa classe e removo);
+
+});
 
 Aula 13 udemy
 
