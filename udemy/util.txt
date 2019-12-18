@@ -371,6 +371,12 @@ $(table thead tr th).each(function(index){
 
 });
 
+
+Mostrar e Ocultar Linhas de Tabela
+attr colspan= 5 -> fala a quantidade de colunas que a tr ocupará
+
+
+
 Aula 13 udemy
 
 

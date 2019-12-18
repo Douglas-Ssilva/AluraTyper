@@ -3,11 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <title>Udemy</title>
+
+    <style>
+        thead {
+            background-color: lightgrey;
+        }
+        .th {
+            background-color: lightseagreen;
+        }
+        .img {
+            width: 20px; 
+            padding-right: 4px;
+            cursor: pointer;
+        }
+    </style>
+
 </head>
 <body>
 
-    <h1>Teste</h1>
-    <input type="text" style="width: 200px; height: 200px; background-color: red; "></input>
+    
+<table style="text-align: center; position: relative; left: 50%; top: 100px;">
+    <thead>
+        <tr>
+            <th>Column1</th>
+            <th>Column2</th>            
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr class="sub">
+            <th colspan="3" class="th">Column1</th>   
+        </tr>
+        <tr>                      
+            <td>ss</td>
+            <td>sd</td>
+        </tr>
+        <tr>
+            <td>df</td>
+            <td>g</td>
+        </tr>
+        <tr>           
+            <td>s</td>
+            <td>g</td>
+        </tr>
+        <tr class="sub">
+            <th  colspan="3" class="th">Column2</th>   
+        </tr>
+        <tr>                      
+            <td>Valor2</td>
+            <td>Valor3</td>
+        </tr>
+        <tr>
+            <td>Valor2</td>
+            <td>Valor3</td>
+        </tr>
+        <tr>           
+            <td>Valor5</td>
+            <td>Valor6</td>
+        </tr>
+    </tbody>
+
+</table>
     
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/script.js"></script>
