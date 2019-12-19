@@ -8,3 +8,42 @@ $('img').bind('click', function(){
         $(this).attr('src', 'img/remove.png').parents().nextUntil("tr.sub").show()
     }
 });
+
+$('a').bind('click', function(){
+    alert();
+    return true;
+});
+
+//$(':input + span').css({
+    //border: '1px solid #000',
+    //padding: '2px',
+    //background: '#DCDCDC',
+    //marginLeft: '4px',
+  //  display: 'none'
+//});
+
+//$(':input').bind('focus', function(){
+  //  $(this).next().fadeIn(1500);
+//}).bind('blur', function(){
+  //  $(this).next().fadeOut(1000);
+//});
+
+$('.toggle').change(function(){
+    if(this.checked){
+        $(':checkbox').attr('checked', 'checked');
+    }else{
+        $(':checkbox').removeAttr('checked');
+    }    
+});
+
+$('textarea').bind('input keyup paste', function(){
+    var maxCaracteres= 20;
+    var qtdeDisponivel= maxCaracteres - $(this).val().length;
+    if(qtdeDisponivel < 0){
+        var texto= $(this).val().substr(0, maxCaracteres);
+        $(this).val(texto);
+        qtdeDisponivel= 0;
+    }
+    $('.count').text(qtdeDisponivel);  
+    
+});
