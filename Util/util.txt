@@ -1,0 +1,74 @@
+Centralizando elementos: 
+
+#pai {
+    width: 100%;
+}
+#pai .box {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center
+}
+
+--------------------------------------------
+
+
+#pai {
+    width: 100%;
+    position: relative;
+}
+#pai .box {
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    margin-left: -25%; //metade do width
+    text-align: center
+}
+
+--------------------------------------------
+
+
+#pai {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#pai .box {
+    width: 50%;
+    text-align: center
+}
+
+Colocar position relative no pai faz com que as coordenadas que eu der no filho peguem como referencia o pai 
+
+.container {
+    height: 80vh;
+    position: relative;
+}
+
+.elemento-filho {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+Forma antiga:
+
+.container {
+    height: 80vh;
+    position: relative;
+}
+
+.elemento-filho {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 200px;
+    margin-left: -200px;
+    margin-top: -100px
+    transform: translate(-50%, -50%);
+}

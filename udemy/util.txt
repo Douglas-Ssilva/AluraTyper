@@ -426,6 +426,8 @@ $('textarea').bind('input keyup paste', function(){
     
 });
 
+Restringir Entrada de Caracteres Específicos
+
 
 Aula 13 udemy
 
