@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Udemy</title>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="slick-1.6.0/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick-1.6.0/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="css/passtrength.css"/>
+
+    <!--Class colocada no input em tempo de execução pelo JQuery UI-->
+    <style type="text/css">
+        .ui-autocomplete-loading{
+            background: white url('img/ajax.gif') right center no-repeat;
+        }
+        .border{
+            border: 2px solid;
+            width: 180px;
+            height: 200px;
+        }
+        .border1{
+            border: 2px solid;
+            width: 140px;
+            height: 100px;
+        }
+        .ui-progressbar {
+        position: relative;
+        }
+        .progress-label {
+            position: absolute;
+            left: 50%;
+            top: 4px;
+            font-weight: bold;
+            text-shadow: 1px 1px 0 #fff;
+        }
+        #ol .ui-selecting {background: #FECA40;}
+        #ol .ui-selected {background: #F39814; color: white;}
+        .slick-prev:before, .slick-next:before {
+	        color: black;
+        }
+        .slider {
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <h3>Accordion</h3>
+    <div id="accordion"><!--Cada inicio de seção é representado por title-->
+        <h3><a href="#">Section 1</a></h3>
+            <div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem porro quisquam est debitis totam dicta! Deleniti at ipsum, ut possimus 
+                    reprehenderit quidem voluptate qui sunt unde, itaque beatae dolorem eos?</p>
+            </div>
+        <h3><a href="#">Section 2</a></h3>
+            <div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem porro quisquam est debitis totam dicta! Deleniti at ipsum, ut possimus 
+                    reprehenderit quidem voluptate qui sunt unde, itaque beatae dolorem eos?</p>
+            </div>
+        <h3><a href="#">Section 3</a></h3>
+            <div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem porro quisquam est debitis totam dicta! Deleniti at ipsum, ut possimus 
+                    reprehenderit quidem voluptate qui sunt unde, itaque beatae dolorem eos?</p>
+            </div>
+    </div>
+    <br/>
+    <h3>AutoComplete</h3>
+    <label for="tags">Tags: </label>
+    <input type="text" id="tags"><br/>
+    <label for="city">Citys: </label>
+    <input type="text" id="city">
+
+    <br/>
+    <h3>Buttons with JQueryUI</h3>
+    <a class="ancora" href="#">Link</a>
+    <a class="ancora" href="#">Link2</a>
+
+    <br/>
+    <div id="checks">
+        <label for="check1">Option1: </label>
+        <input type="checkbox" id="check1">
+        <label for="check2">Option1: </label>
+        <input type="checkbox" id="check2">
+        <label for="check3">Option1: </label>
+        <input type="checkbox" id="check3">
+    </div>  
+        
+    <br/>
+    <!--Sem o attr name podemos selecionar as 2 optios ao mesmo tempo-->
+    <div id="radius">      
+        <input type="radio" name="radio" id="radio1"><label for="radio1">Homem</label>
+        <input type="radio" name="radio" id="radio2"><label for="radio2">Mulher</label>
+    </div>      
+    <br/>
+    <h3>Datepicker</h3>
+    <input type="text" id="data">
+
+    <br/>
+    <h3>Dialog</h3>
+    <div id="dialog" title="Title">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad ab odit ipsam cum, alias vitae quas mollitia vero voluptates amet
+         quo veniam perspiciatis maiores ut magnam quae beatae minima reprehenderit.
+    </div>
+
+    <br/>
+    <h3>Drag and Drop</h3>
+    <div id="drag" class="border1">
+        <p>Leve-me para o alvo</p>
+    </div>
+    <br/> <br/>
+    
+    <div id="drop" class="border">
+        <p>Solte o elemento aqui</p>
+    </div>
+
+    <br/>
+    <h3>Carrinho de compras</h3>
+    <div id="catalogo">
+       <h3>Catalogo</h3>
+       <ul>
+            <li>Camisa</li>
+            <li>Short</li>
+            <li>Calça</li>
+       </ul>
+    </div>
+    <br/>
+    <div id="car">
+        <h3>Carrinho</h3>
+        <ul>
+             <li class="mensagem">Compras...</li>             
+        </ul>
+     </div>
+     <br/>
+     <h3>ProgressBar</h3>
+     <div id="progressbar">
+         <div class="progress-label">Loading...</div>
+    </div>
+
+    <br/>
+    <h3>Resizable</h3>
+    <div id="resizable" class="ui-widget-content">
+        <h3 class="ui-widget-header">Resizable</h3>
+    </div>
+
+    <br/>
+    <h3>Tabs</h3>
+    <div id="tabs">
+        <!--UL representam as abas. Abaixo das UL ele procurará divs que representam o conteúdo das abas-->
+        <ul>
+            <li><a href="#um">Ancora1</a></li>
+            <li><a href="#dois">Ancora2</a></li>
+            <li><a href="#tres">Ancora3</a></li>
+        </ul>
+        <div id="um"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum dolor ad cumque cupiditate</div>
+        <div id="dois">repellendus dolores esse distinctio maiores eius mollitia illo</div>
+        <div id="tres">, tempora similique vitae quidem necessitatibus error, molestiae voluptatem debitis.</div>
+    </div>
+
+    <br/>
+    <h3>Slider</h3>
+    <div id="slider"></div>
+    <input type="text" id="input">
+
+    <br/>
+    <h3>Elementos selecionaveis</h3>
+    <ol id="ol" style="list-style: none;">
+        <li class="ui-state-default">1</li>
+        <li class="ui-state-default">2</li>
+        <li class="ui-state-default">3</li>
+        <li class="ui-state-default">4</li>
+    </ol>
+
+    <br/>
+    <h3>Validate</h3>
+    <form id="formulario">
+        <fieldset>
+            <div>
+                <label for="nome">Nome: </label>
+                <input type="text" id="nome" class='required'>
+            </div>
+           
+            <input type="submit" value="Enviar"/>
+        </fieldset>
+    </form>
+    <br/>
+    Date: <input type="text" id="dataP">
+    Phone: <input type="text" id="phone">
+
+    <br/>
+    <h3>Carousel</h3>
+
+        <ul class="slider">
+            <li><img src="https://sorgalla.com/jcarousel/examples/_shared/img/img1.jpg" width="600" height="400" alt=""></li>
+            <li><img src="https://sorgalla.com/jcarousel/examples/_shared/img/img2.jpg" width="600" height="400" alt=""></li>
+            <li><img src="https://sorgalla.com/jcarousel/examples/_shared/img/img3.jpg" width="600" height="400" alt=""></li>
+        </ul>
+
+    <br/>
+    <h3>WebService CEP</h3>
+    <form method="get" action=".">
+        <label>Cep:
+        <input name="cep" type="text" id="cep" value="" size="10" maxlength="9" /></label><br />
+        <label>Rua:
+        <input name="rua" type="text" id="rua" size="60" /></label><br />
+        <label>Bairro:
+        <input name="bairro" type="text" id="bairro" size="40" /></label><br />
+        <label>Cidade:
+        <input name="cidade" type="text" id="cidade" size="40" /></label><br />
+        <label>Estado:
+        <input name="uf" type="text" id="uf" size="2" /></label><br />
+        <label>IBGE:
+        <input name="ibge" type="text" id="ibge" size="8" /></label><br />
+      </form>
+
+
+      <br />
+      Password: <input type="password" id="pass"/>
+
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/datepicker-pt-BR.js"></script>
+    <script src="plugins/jquery.validate.min.js"></script>
+    <script src="plugins/jquery.maskedinput.js"></script>
+    <script src="plugins/slick.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="plugins/jZipCode.js"></script>
+    <script src="plugins/jquery.passtrength.js"></script>
+    <script src="js/script-ui-my.js"></script>    
+</body>
+</html>

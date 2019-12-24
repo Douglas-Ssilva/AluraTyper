@@ -428,9 +428,64 @@ $('textarea').bind('input keyup paste', function(){
 
 Restringir Entrada de Caracteres Específicos
 
+$('#campo').bind('keydown', function(event){
+    var keyCode= event.which;
+    var isNumber= (keyCode > 47 && keyCode < 58);
+    var isOther= (",8,46,37,38,39,40,".indexOf("," + keyCode + ",") > -1 ); //keyCode de backspace, setas
+    if(isNumber || isOther){      //teclas numericas compreendidas entre 47 e 58
+        return true;
+    }
+    return false;
+});
+
+Instalação jQueryUI
+1- Escolha do theme e download do mousemove
+2- Pegar files css e js
+
+Accordion(Seçao 1, Seção 2, cada uma com seu conteúdo) 
+
+$('#accordion').accordion({ Aplico ao container
+    collapsible: true //permite abrir e  fechar o elemento
+});
+
+
+Auto Complete, buttons, Drag and Drop Arrastar e Soltar, Dialog, progressbar, Elementos Redimensionáveis, tabs abas, slider,  Elementos Selecionáveis
+script-ui-my.js contem os exemplos
+
+Plugins jQuery (mask, validação de form, colorPicker, tree view, carousel, ZipCode Finder Localizador de Endereços)
+Repositórios: 
+(plugins.jquery.com) / code.google.com / github.com / sourceforge.net
+
+Ajax com jQuery JsonP e Requisição de Domínio Cruzado
+Request no mesmo dominio:
+$('#button').click(function(){
+    $.ajax({
+        type: 'GET',
+        url: 'ajax/file.js', //caminho relativo
+        dataType: 'js',      //html, json, jsonP, text. xml
+        success: function(result){
+            alert(result);
+        }
+    });
+});
+
+Conteúdo de outros domínios: 
+$.getJSON('url',
+           {
+               tags: 'capoeira',
+               tagmode: 'any',
+               format: 'json'
+           },
+           function(data){
+            $.each(data.items, function(i, item){
+                $('#resp').append($('<img/>').attr('src', item.media.m));
+                if(i === 3) return false;
+            })
+           }
+);
 
 Aula 13 udemy
 
-
+Shift + Alt + A  - comentar
 
 
