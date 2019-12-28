@@ -1,0 +1,180 @@
+Media= 'all' tv, screen, all -> attr que informo pra qual tipo de device meu css se direcionará
+
+Tipos de seletores: 
+* -> universal, as regras definidas aqui são aplicadas a todos os elementos
+
+p {} -> seletor elementos(tipo)
+
+.class -> seletor class (possui mais prioridade do que os acima)
+
+#id -> seletor id (identificador único)
+
+input[title=teste] -> seletor tipo atributo
+
+input[title~=teste] (title= teste XTI)
+
+input[title|=teste] (title= teste-xti)
+
+Seletores compostos: 
+Descendente: 
+div p {} - pega os p da div(não é necessário o caminho completo)
+
+Filho: 
+div > p {} - é aplicado somente se o p for filho direto de div
+
+Irmão adjacente: 
+p + p {} - aplique essa regra ao irmao do primeiro p que encontrar
+
+Pseudo elementos e pseudo class: 
+Complementam os seletores.
+
+div h1:first-child {} - alcança se for o primeiro filho da div
+
+Pseudo cllass p links
+a:link {} - ainda nao foi visitado(estado inicial)
+
+a:visited {} - já foi visitada
+
+a:hover {} - passa o mouse sobre 
+
+a:active{}
+
+a[href^=http:] {} - pegando as ancoras que tenham o href começando assim
+
+a[href$='.zip'] {} - os que terminam com .zip
+
+Class dinamicas:
+input[type='text']:focus {} - quando receber foco, faça isso
+
+input[type='text']:hover {} - quando passar o mouse...
+
+a:active{} - quando clica, muda a cor do link
+
+:focus {} - aplica a todos elementos
+
+Pseudo elementos
+
+p:first-line {} - aplicando na primeira linha
+
+p:first-letter{} - modificando a primeira letra
+
+p:after{ content: 'FIM' } - coloca a palavra no fim
+
+p:before{ content: 'FIM' } - coloca a palavra no inicio 
+
+Efeito Cascata- quando 2 ou mais regras seleciona o mesmo elemento
+
+Ordem de precendencia: folhas de estilo do autor, do user e browser.
+Folhas de estilos do autor, mais importantes: 
+    - inline(direto na tag)
+    - estilo incorporado (head)
+    - estilo externo (importado)- criadas em um file sepadaro e importado
+
+!important tem precedencia sobre as demais.
+
+Calculo de Especificidade(regras com seletores mais especificos, sobrescrevem os demais)
+- Soma-se os valores dos seletores
+a- inline
+b- IDs
+c- Class, pseudoClass, attr
+d- elementos e pseudoElementos
+
+EX:        A , B, C, D
+P {} -     0,0,0,1     1
+div p {}   0,0,0,2     2
+p.intro{}  0,0,1,1     11
+#menu{}    0,1,0,0     100
+style=''   1,0,0,0     1000
+
+Efeito Herança: 
+Tudo que aplicar ao body, os elementos filhos herdarão.
+
+BoxModel (determina a maneira como os elementos são exibidos)
+Está tanto nos elementos inline quanto nos block
+
+Ex: (Margin(Border(Padding(Content(width e heigth)))))
+
+margin- sentido horário.
+
+Medidas Absolutas e Relativas
+Medidas lineares: 
+    -MEdidas Absolutas: não dependem de um valor de referencia(só devem ser usadas quando conhecemos bem onde irá rodar o sistema)
+        Ex: 5in, 5cm, 5mm, 5pt, 5pc
+
+    - Medidas relativas: 
+        Ex: 5em(calculada em relação a outra fonte), 5ex, 5px(é calculada em relação a resolução do dispositivo), %(calculada em relação a um valor pré-existente).
+            Ex: fonte-size: 60px;
+                h1{
+                    margin-left: 1em; - terá a margin de 60px
+                    margin-bottom: 2em; nessa caso terá 120px
+                }
+
+
+Textos Espaçamento e Alinhamento
+
+letter-spacing - espaçamento entre as letras
+word-spacing - Espaçamento entre as palavras
+line-heigth - espaçamento entre as linhas do Texto (valor aplicado aqui é com base no font-size)
+vartical-align: sub - fica ligeiramente abaixo ou acima(sup)
+text-align - alinhamento do Texto
+text-indent- identação p primeira linha do Texto
+text-decoration - sublinhado, taxado, linha acima
+text-transform - colocar letter maiusculas, minusculas
+
+Background
+Default é transparente.
+Background-color: fundo do elemento
+Background-image: url(); define uma imagem de fundo
+Background-repeat: no-repeat; assim a imagem não se repete (repeat-y, repeat-x )
+Background-attachament: fixed; ajusta o Background da div ao do body
+Background-position: left-top; posisção da imagem no elemento
+
+Background: red url() no-repeat fixed left-top;
+
+Elementos em bloco ocupam todo espaço da página
+
+Para aplicarmos width em elementos inline temos que transformar o display dele p block;
+
+Estilização de Listas
+
+ul { list-style: none inside url() } - tirando marcação defalt  e colocando uma imagem personalizada
+
+Padding e margin quando formos zerar não precisa da unidade de medida.
+
+
+Posicionamento Fluxo Normal
+
+ Elementos block: (ocupam toda largura da página)
+ div, p, todos h - pois geram uma quebra de linha acima  e abaixo
+
+ Elementos inline: (não geram quebra de linha)
+ em, strong, b, img - são organizados em linha
+
+Fluxo normal: Os no nivel de bloco, são colocados de forma empilhada  na página. Cima p baixo.
+
+Posicionamento Float (elementos ocupam seu espaço)
+Limpando float: clear: (left, rigth, both)
+
+Colocar position relative no pai e no filho absolute faz com que o filho se movimente no container com base no Posicionamento do pai.
+
+position fixed tem quase o mesmo comportamento do absolute exceto que quando rolamos a page, o elemento com essa propriedade se mantém a mostra.
+
+Posicionamento Z Index (define qual elemento fica à frente do outro, não pode ser usado no fluxo default do browser)
+
+Layout Introdução Tableless - Parte1
+
+font-size: 12px;
+#container{ width: 40em; }
+
+Centralizando container: 
+margin: 0 auto; - pega a largura de um dos lados / 2 e coloca metade do lado direito e metade do esquerdo.(precisa do width)
+
+Examples: jornadaDev 
+
+
+CSS Sprite (Consiste em termos apenas uma imagem contendo todas as imagens menores que usaremos no site a fim de economizar nas request ao server)
+
+Bordas Arredondadas e Sombreamento CSS 3
+Border-radius: 10px - faz o arredondamento da borda.
+box-shadow: 10px 10px 5px #red;
+

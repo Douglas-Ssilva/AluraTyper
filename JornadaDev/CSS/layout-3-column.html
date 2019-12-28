@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">   
+    <script type="text/javascript" src="../Jquery/jquery.js"></script>
+    <title>CSS</title>
+    <style>
+        div {
+            border: 1px solid #000;
+        }
+        #container {
+            width: 90%;
+            margin: 0 auto;
+        }
+        #header, #footer {
+            text-align: center;
+            background: lightgray;
+            font-weight: bold;
+        }
+        #left {
+            float: left; 
+        }
+        #content {
+            float: right;
+            width: 1100px;
+        }
+        #footer {
+            clear: both;
+        }
+        p[title=title] {
+            text-align: center;
+        }
+        #main {
+            float: left;
+            width: 60%;
+        }
+        #right {
+            float: right;
+            width: 38%;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <p>Cabeçalho</p>
+        </div>
+        <div id="left">
+            <p title="title">Left</p>
+            <ul>
+                <li>Esportes</li>
+                <li>Notícias</li>
+                <li>Lazer</li>
+            </ul>
+        </div>
+        <div id="content">
+            <p  title="title">Content</p>
+            <div id="main">
+                <p title="title">Main</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero iste quam praesentium fugit, delectus magnam maiores, ipsa aut adipisci aliquam nobis architecto, dicta quos deleniti. Soluta, adipisci. Optio, dignissimos ex.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero iste quam praesentium fugit, delectus magnam maiores, ipsa aut adipisci aliquam nobis architecto, dicta quos deleniti. Soluta, adipisci. Optio, dignissimos ex.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero iste quam praesentium fugit, delectus magnam maiores, ipsa aut adipisci aliquam nobis architecto, dicta quos deleniti. Soluta, adipisci. Optio, dignissimos ex.</p>
+            </div>
+            <div id="right">
+                <p  title="title">Right</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero iste quam praesentium fugit, delectus magnam maiores, ipsa aut adipisci aliquam nobis architecto, dicta quos deleniti. Soluta, adipisci. Optio, dignissimos ex.</p>
+            </div>
+        </div>
+        
+        <div id="footer">
+            <p>Footer</p>
+            @Douglas Silva
+        </div>
+    </div>
+
+</body>
+</html>
