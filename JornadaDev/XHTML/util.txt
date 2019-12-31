@@ -1,0 +1,127 @@
+Tecnologia de marcação semântica
+
+Elementos Inline (pequenos pedaços)
+XHTML é preciso colocar aspas duplas nos valores dos conteúdos.
+    Ex: <h1 align= "center"></h1> - align está deprecated (text-align)
+
+Elementos em bloco: 
+os <H>, <p>, <div>
+
+Elementos inline: 
+<b>, <span>, <strong>, <i>, <del>, <tt>- letras ocuparem o mesmo espaço, 
+<sup>, <sub>, <em>- ênfase, tem significado maior p navegador
+<big> , <small>, <img>, <br />
+
+XHTML: exige que o fechamento das tags tenham um espaço: 
+    Ex: <br />, <li></li>- obrigatório o fechamento das tags
+
+Imagens: 
+alt é um attr obrigatório no XHTML
+
+A cada img que há na page, há uma request no server p buscá-la 
+Editores de img: 
+Gimp, Picasa, Imagemagic
+
+Listas 
+<ul> unorder list
+<ol> order list
+<dl> lista de definição <dt>- significado 
+    Ex: <dl>
+            <dt>Tecnologia</dt>
+            <dd>Tem a ver com a internet</dd>
+        </dl>
+
+Tag <pre>- usada para colocarmos blocos de código, visto que ela mantem o espaço e a identação
+
+Elementos de Bloco (maiores partes da page)
+Block-level Elements: 
+<address> - <article> - <aside> - <blockquote> - <canvas> - <dd> - <div> - <dl> - <dt> - <fieldset> - <figcaption> - <figure> - <footer> - <form>
+<h1>-<h6> - <header> - <hr> - <li> - <main> - <nav> - <noscript> - <ol> - <p> - <pre> - <section> - <table> - <tfoot> - <ul> - <video>
+
+Inline Elements: 
+<a> - <abbr> - <acronym> - <b> - <bdo> - <big> - <br> - <button> - <cite> - <code> - <dfn> - <em> - <i> - <img> - <input> - <kbd> - <label> - <map> - <object>
+<output> - <q> - <samp> - <script> - <select> - <small> - <span> - <strong> - <sub> - <sup> - <textarea> - <time> - <tt> - <var>
+
+Liks: 
+../ - volta um nivel de diretorio
+./ ou caminho.xhtml - diretorio current
+
+P navegarmos na mesma page, colocamos um id na ancora e chamos assim: <a href='#id'>
+<a href='./page/page.htm#idAncoraInPage'> - vai direto p parte da page que contém esse id
+
+Link p email: 
+<a href='mailto:email.com.br'> - abre o programa de envio de email
+<a href='mailto:email.com.br?cc=emailcopia.com.br&subject=Prova&body=CorpoEmail'>Email</a>
+<a href='gtalk:chat?jid=yourscreenname'>GTalk</a>
+
+Imagens Mapeadas (Tenho uma imagem com chinelo, carta, côco)
+<img src usermap='#brasil' alt/>
+<map name='brasil'>
+    <area shape='rect' coords='112, 178, 316, 369' href alt> -> retangulo pego as coords da ponta sup esquerda e ponta inf direita
+    <area shape='circle' coords='400, 178, 100' href alt> -> circulo pego ponto central e raio= ponta lateral direita(500) - ponto central(400)
+    <area shape='poly' coords='112, 178, 316, 369, 100, 200' href alt> -> triangulo pego as coords de cada ponta
+</map>
+
+Divs e Spans (Elementos genéricos, não foram criados p atender à marcação semântica)
+Nenhum outro elemento em bloco pode conter outro no xhtml, exceto as divs
+
+Span container generico inline
+Div container generico block
+
+
+Tabelas Introdução (devem ser usadas p apresentar dados tabulares)
+tr- table row
+td- table data
+cellpadding- espaço entre o conteudo e a borda
+cellspacing- espaço entre as td
+colspan='2'- td ocupe 2 column(horizontal)
+rowspan='5'- head, ocupe essas row(vertical)
+
+Formulário Controles
+<form action='server' method='GET | POST'>
+<input type='submit'> - envia os dados p server
+<input type='reset'> - limpa form
+<input type='button'> - executa script de validação
+
+<select>
+    <optionGroup label='Navegadores'>
+        <option>Chrome</option>
+    </optionGroup>
+    <optionGroup label='Editores'>
+        <option>Notepad++</option>
+    </optionGroup>
+</select>
+
+Formulário Acessibilidade
+<label for='nome'>
+<input type='text' id='nome'>
+fieldset- agrupo conjuntos de Formulário que possui informações relacionadas (<legend>Informações pessoais</legend>)
+<input type='text' tabindex='3' accessKey='N'> - prioridade do tab, no 3 tab acessa aqui, apertando N foca aqui
+disabled- não envia os dados do form
+readonly- envia os dados do form
+
+Caracteres Especiais & Encoding
+w3c- define os padrões da web
+w3school - há um tutotial sobre xhtml
+
+<!DOCTYPE> is mandatory
+Validadores DTD: 
+Strict - DOCTYPE mais rigoroso do xhtml
+Transitional- é o mais usado na web, é mais flexivel, deixa usar tags deprecated
+
+validator.w3.org - validator de html
+
+Não é permitido colocar elementos em bloco dentro de elementos em bloco, exceto divs
+
+
+
+
+
+
+
+
+
+
+
+
+
