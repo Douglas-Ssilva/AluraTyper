@@ -484,8 +484,162 @@ $.getJSON('url',
            }
 );
 
-Aula 13 udemy
+Guardando dados em um elemento
 
+HTML5 nos permite salvar attr e valores em elementos.
+    Ex: $('input').attr('idade', 90); -> fica no html
+
+Salvando dados na memoria do jQuery: 
+    $('input').data('idade', 90); salva na memoria do pc, nao fica no HTML
+    $('input').data('idade');
 Shift + Alt + A  - comentar
+
+Métodos úteis do dia a dia
+
+$.trim(elemento); - remove os espaços em branco antes e depois do texto
+$('li').each(function(){         //Percorrendo as li
+    console.log($(this).text());
+});
+$.type(elemento);       //Verificando tipo da variavel
+$.isNumeric(elemenro);  //return boolean
+$.isArray();
+
+js puro -> typeof elemento;  //retorna 'string', 'number'
+
+Como saber se um elemento existe na tela? 
+1- posso pegar via class ou id e chamar o (.length > 0), não basta apenas pegar o elemento via ID ou class, a seleção via jQuery retorna um array vazio [] ou com os elementos achados 
+    if([]){
+        alert('Entra');
+    }
+
+Como saber se um elemento tem uma class em particular?
+$('elemento').hasClass('class'); boolean
+
+Como ativar/desativar um elemento de form? 
+$('elemento').attr('disabled', 'disabled');
+$('elemento').removeAttr('disabled');
+$('elemento').removeAttr('checked');
+
+Como pegar o Item selecionado de um select? 
+$('elemento').find('option').eq(1).attr('selected', selected); --selecionando item no dropdown
+$('elemento').val();
+
+ Como alterar o 3º elemento de uma lista de 10 itens?
+ $('li').eq(2).text('Teste');   --get item da posição 3
+
+ Como pegar um elemento nativo com jQuery? o jQuery nos permite na seleção o retorno array, via js puro retorna somente um elemento
+ Transformando objeto jquery p js vanilla:  
+    $('li')[0].innerHTML('text'); //retorna sem os []
+
+Definindo Eventos em Elementos DOM?
+$('elemento').click(function(){
+    $(this).toggleClass('class');   --se nao tiver coloque, se tiver remova
+});
+
+mouseover - quando passar o mouse no elemento
+mouseout - quando sair do elemento
+
+Eventos Auxiliadores
+$('elemento').hover(function(){ --faz o mesmo papel do mouseover e mouseout
+    addClass
+}, function(){
+    removeClass
+});
+
+$('elemento').hover(function(){ --faz o mesmo papel do mouseover e mouseout
+    toggleClass //mesma funçao dos acima
+});
+
+Formas de colocar eventos: 
+$('elemento').click();
+$('elemento').bind('click');
+$('elemento').on('click');
+
+Removendo Eventos de um Elemento DOM
+
+$('elemento').unbind('click');
+$('elemento').off('click');
+
+Acionamento Falso de Eventos
+$('elemento').trigger('click');
+
+Propriedades padrão de um Evento
+$('buttonTypeSumit').click(function(e){
+    e.preventDefault(); //nao será submetido
+    e.target or this;   //mostra o elemento que fez disparar o event
+    e.type;             //tipo do event
+    alert('');
+});
+
+Eventos de Browser
+$(window).bind('resize', function(){
+    alert('scroll');
+});
+$('elemento').bind('scroll', function(){});
+
+Eventos de Formulário
+$('form').bind('submit', function(){
+
+});
+$('elemento').bind('select', function(){}); //seleciona texto dentro do input
+- focus ganho foco
+- blur perco foco
+- change quando mudar no dropdown
+
+Aplicar o mesmo evento em 2 elementos
+$('#elemento, #elemento2');
+
+Eventos de Teclado
+keydown - tecla pressionada
+keyup - solta tecla
+
+e.keyCode - number da tecla pressionada
+
+Eventos de Mouse (podem ser aplicados a qualquer elemento)
+
+mousedown - aperta o mouse no elemento, pressiona
+mouseup - quando solta o click
+click - executa os 2 events acima
+mousemove - quando mover o mouse sobre o elemento
+mouseover - quando entro com o mouse na area do event, executa somente uma vez
+mouseout - quando sai do elemento
+dblclick - 2 clicks, depende da velocidade do click
+
+Seção 4 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

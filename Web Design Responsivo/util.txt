@@ -1,0 +1,84 @@
+Design fluído é o coração de um bom design responsivo. Com o uso de medidas flexíveis, como as porcentagens, a página consegue adaptar seu layout a diversas resoluções diferentes.
+O fluxo é esse: olhar o design, observar as proporções e traduzir para uma porcentagem no CSS. 2 colunas? 50%. 3 colunas? 33%. 4 colunas? 25%. 5 colunas? 20%.
+em é uma unidade de medida normal do CSS, podendo ser usada em qualquer propriedade. Seu cálculo é com relação ao tamanho do texto, mas seu uso é universal.
+
+Mais Design Fluído
+% -> relativo as propriedades do Pai.
+
+font-size: 125% -> é 125 vezes maior que o do pai.
+É uma medida flexivel pois se mudar a fonte do Pai é replicada p todos filhos que usam a % como medida.
+
+em
+font-size: 1.25em; = 125%
+
+margin: 1em 0; -> relativo ao font-size do container, é proporcional.
+
+max-width: 1200px; -> definição do tamanho máximo, não estoura essa medida, será responsível daqui p baixo
+min-width: contrario do max. Exemplo: chagando a essa largura, vire somente uma column
+
+Imagens fluídas: 
+width: 100%; -> independente do tamanho do container, ela acompanhará.
+max-width: 100%; (nao deixa a imagem estourar, nem acompanha caso a tela seja grande)
+
+O max-width é uma ótima forma de limitar a fluidez de elementos na página (afinal, é difícil fazer tudo fluir bem de 0 até infinitos pixels).
+O inline-block é interessante por simular uma linha de texto com seus elementos. Se não cabe mais um "caracter" na linha, a "palavra" escorrega pra linha de baixo.
+
+Apesar do em não ser fluído por natureza, sua característica permite que uma alteração na fonte base do texto escale proporcionalmente outros elementos na página.
+
+Media Queries (nos permite fazer layout fluído, inspirado no Media Types do CSS2)
+    @media (min-width: 400px){ //é aplicado p telas que tenham no mínimo 400 px, daqui p cima
+
+    }
+Mais usados: 
+max-width
+min-width (**)
+
+Breakpoints : px que fará com que minha página ficará com uma column
+
+Frameworks responsivos: (Twiter Bootstrap)
+Large display: 1200px and up
+Default: 980px and up
+Portrait tablets: 786px and above
+Phones to tablets: 767px and below
+Phones: 480px and below
+
+Breakpoints de conteúdo: pegar o site e criar media query especificos p devices, pois não há device default.
+
+MQ desktop-first: 
+h1 {
+    float: left;
+}
+
+@media (max-width: 400px) {
+    h1 {
+        float: none;
+    }
+}
+
+MQ mobile-first: 
+/*default float: none*/
+
+@media (min-width: 400px) {
+    h1 {
+        float: left;
+    }
+}
+
+http://www.w3.org/TR/css3-mediaqueries/
+
+Assim instruo o site a se comportar com base no tamanho da tela, faz o css funcionar corretamente: adapta de acordo com o tamanho da tela de cada dispositivo.
+    <meta name="viewport" content="width=device-width"> 
+
+Mas existe um bug conhecido no iOS que faz com que o viewport não se adapte ao rotacionar o dispositivo. 
+Uma gambiarra que evita o bug é colocar o viewport como <meta name="viewport" content="width=device-width, initial-scale=1">.
+
+
+
+
+
+
+
+
+
+
+
