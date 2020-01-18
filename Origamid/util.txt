@@ -1,0 +1,9 @@
+==============CSS Avançado Posicionamento================
+
+content="width=device-width -> largura do conteúdo será da largura do device
+
+Sempre que contivermos um fundo com cor diferente sempre terá um elemento dentro de outro. Uma section(color aqui) e dentro uma div(vai alinhar o conteudo ao centro, 
+pai nao alinha pois pega 100% da page) que com ela consigo ter controle sobre o posicionamento dos elemntos internos
+
+Altura das divs são definidas de acordo com o conteúdo que está dentro dela
+Só precisamos de clearfix quando todos elementos dentro do container estão flutuando

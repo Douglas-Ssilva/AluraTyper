@@ -1,0 +1,408 @@
+/*Reset*/
+
+body, h1, h2, h3, p, ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+* {
+    box-sizing: border-box; /*Assim nao preciso fazer o calculo de width, pois existe o box-model que joga meu width p cima. Add toda border e padding ao width declarados aqui*/
+}
+
+body {
+    font-family: Georgia, serif  ;
+    color: #252525;
+}
+
+/*Menu*/
+.menu {
+    background: #252525;
+    padding: 20px 0;
+}
+
+.menu-container {
+    max-width: 960px; /*Só com width ele gera barra de rolagem*/
+    margin: 0 auto; /*centralizar div nav*/    
+    /*display: block; ocupa 100%*/
+}
+
+/*Quando há 2 elemntos flutuando, como é o caso, a div não consegue pegar o heigth do elemento. Clearfix*/
+.menu-logo {
+    display: block;
+    float: left;
+    margin-left: 10px;
+}
+
+.menu-nav {
+    float: right;
+    margin-right: 10px;
+}
+
+/*clearfix aplicado ao container p correção acima*/
+.menu-container::after, .menu-container::before {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.menu-nav li {
+    display: inline-block; /*as deixando lado a lado*/ 
+}
+
+/*html {
+    font-size: 10px;
+} em acompanha independente da fonte base */
+
+.menu-nav a {
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25em; /*conta para saber o em. Pegar px do browser e divido por quantos px quero que a fonte tenha. Ex: Quero 20 px. browser tem 16. 20/16= 1.25em*/
+}
+
+.intro {
+    background: url(../img/bg-intro.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 150px 0;
+    color: #fff;
+    text-align: center;   
+}
+
+.intro h1 {
+    text-transform: uppercase;
+    font-size: 3em; /*48px / 16px*/
+}
+
+.intro h1::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 4px;
+    margin: 10px auto;
+    background: #fff;
+}
+
+.intro p {
+    font-size: 1.125em;
+    font-style: italic;
+}
+
+/*Sobre*/
+.sobre {
+    padding: 60px 0;    
+}
+
+.sobre-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.sobre-container::after, .sobre-container::before {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.sobre h2 {
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 2.25em;
+}
+
+.sobre-item {
+    width: 460px;
+    float: left;
+    margin: 0 10px;
+}
+
+.sobre-item img {
+    display: block; /*tirando o margin padrão da img*/
+    max-width: 100%; /*Deixa a img 'responsiva'*/
+}
+
+.sobre-item h3 {
+    font-size: 2.25em;
+    background: #252525;
+    width: 220px;
+    color: #fff;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+    line-height: 1em;
+    padding: 5px 0 10px 0; 
+    position: relative;
+    z-index: 5;
+    top: -25px; /*O espaço que o elemento ocupava continua intacta, com position relative, com absolute a posição original dele some*/
+}
+
+.sobre > p { /*Pegando os p diretamente ligados ao sobre*/
+    font-size: 1.25em;
+    line-height: 1.4em; /*espaçamento entre linhas*/
+    font-style: italic;
+    text-align: center;
+    max-width: 460px; /*deixa responsivo*/
+    margin: 20px auto;
+}
+
+/* Produtos */
+.produtos {
+    background: #e7e4d8;
+    padding: 60px 0;
+    border-top: 3px solid #d6d3c8;
+    border-bottom: 3px solid #d6d3c8;
+}
+
+.produtos-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.produtos-item {
+    width: 300px;
+    float: left;
+    margin: 0 10px 20px 10px; /*colocando margin tbm quando os item forem um p debaixo do outro*/
+}
+
+/*clearfix p resolver problema de nao conseguir pegar o heigth*/
+.produtos-container::before, .produtos-container::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.produtos-item > h2 {
+    font-size: 2.25em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.produtos-item > p {
+    font-size: 0.875em;
+    line-height: 1.4em;
+}
+
+/*Criando circulos*/
+.produtos-item h2::before {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 100px; /*caso altere esses mudo o formato do circle*/
+    background: currentColor;
+    border-radius: 50%;
+    margin: 20px auto;
+    border: 5px solid #e7e4d8; /*deixando da mesma cor do fundo do container*/
+    box-shadow: 0 0 0 10px currentColor; /*Cria o circle em volta. Poderia encadear outros valores depois do blue, aumentando p 15 px que formaria mais um circle*/
+}
+/*currentColor cor corrente definida nos elementos e herda*/
+
+h2.produtos-paulistas::before {
+    color: #492901;
+}
+h2.produtos-cariocas::before {
+    color: #c17139;
+}
+h2.produtos-mineios::before {
+    color: #d7a54d;
+}
+
+.produtos-btn {
+    width: 180px;
+    border: 3px solid;
+    color: #252525;
+    text-decoration: none;
+    display: block;
+    font-size: 1.125em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px 0;
+    margin: 20px auto 0 auto;
+}
+
+/* Locais */
+
+.locais {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.locais-item > img {
+    float: left;
+    width: 460px;
+    display: block; /*tira margin default da img*/
+    margin: 0 10px;
+}
+
+.locais-item > div {
+    width: 460px;
+    float: left;
+    margin: 0 10px;
+}  
+/*nao deixar elementos que nao estejam dentro de mim flutuar do meu lado*/ 
+.locais-item {
+    clear: both;
+    margin: 60px auto;
+}
+/*tecnica do clearfix pois os elementos que flutuam o container nao consegue definir o heigth, é possível fazer com overflow:hidden mas causa mais problemas*/
+.locais-item::after, .locais-item::before {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.locais-item h2 {
+    font-size: 2.25em;
+    margin-bottom: 20px;
+}
+
+.locais-item p {
+    font-size: 1.125em;
+    line-height: 1.4em;
+    max-width: 320px;
+    margin-bottom: 40px;    
+}
+
+.locais-item a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 3px solid;
+    font-size:  1.125em;
+    text-transform: uppercase;
+    color: #252525;
+}
+
+/* Assine */
+.assine {
+    background: #e7e4d8;
+    padding: 30px 0;
+}
+
+.assine-container {
+    margin: 10px auto;
+    max-width: 960px;
+}
+
+.assine-container::after, .assine-container::before {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.assine-info {    
+    width: 460px;
+    margin: 0 10px;
+    float: left;    
+}
+
+.assine-info h2 { 
+    font-size: 2.25em;
+ }
+
+ .assine-info p { 
+    font-size: 1.5em;
+    font-style: italic;
+ }
+
+ .assine form {
+     width: 460px;
+     margin: 10px 10px 0 10px;
+     float: left;
+ }
+
+ .assine form label {
+     display: none;
+ }
+
+ .assine input {    
+     width: 320px;
+     border: 3px solid #252525;
+     background: none; /*pega cor de fundo*/
+     font-size: 1.5em;
+     font-style: italic;
+     font-family: Georgia, serif; /*form nao pega do body assim como a <a>*/
+     float: left;
+     padding: 10px;
+ }
+
+ .assine button {
+    background: #252525;
+    font-family: Georgia, serif; 
+    text-transform: uppercase;
+    width: 140px;
+    color: white;
+    border: none;
+    padding: 13px 0;
+    font-size: 1.5em;
+    cursor: pointer;
+ }
+
+ /*Footer*/
+
+ .footer {
+     background: #d6d3c8;
+     padding: 40px 0;
+ }
+
+ .footer-container {
+     max-width: 960px;
+     margin: 0 auto;
+ }
+
+ .footer p {
+     line-height: 1.4em;
+     margin: 0 10px;
+     font-size: 1.125em;
+     float: left;
+     max-width: 540px;
+ }
+
+ .footer img {
+     float: right;
+     margin: 0 10px;
+     display: block;
+ }
+
+ .footer-container::after, .footer-container::before {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
