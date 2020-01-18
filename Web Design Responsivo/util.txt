@@ -72,13 +72,71 @@ Assim instruo o site a se comportar com base no tamanho da tela, faz o css funci
 Mas existe um bug conhecido no iOS que faz com que o viewport não se adapte ao rotacionar o dispositivo. 
 Uma gambiarra que evita o bug é colocar o viewport como <meta name="viewport" content="width=device-width, initial-scale=1">.
 
+Imagens Responsivas
+Resolução é a quantidade de px da tela.
+Uma tela de alta resolução é uma com vários px. 
 
+Pixel físico é o menor quadradinho da tela.
+DIP- device independent pixel (é o menor ponto da tela que depende do aparelho que estou trabalhando)
 
+Device Pixel Ratio
+Se prestarmos atenção, existe uma proporção entre o número de pixeis no CSS e o pixel que é usado efetivamente nas imagens na tela. Pode ser 1:1, no caso da tela comum, ou 2:1,
+ no exemplo visto a cima. Tal proporção tem o nome de "device pixel ratio" ou dPR e sua fórmula é bem simples:
 
+dPR = pixeis físicos / DIPs
 
+Quando colocamos uma imagem comum em uma tela retina o S.O estica a imagem a deixando ruim. Resolvo assim: 
+.logo {
+    background-image: url(logo.png);
+}
 
+@media (resolution: 2dppx) {
+    .logo {
+        background-image: url(logo@2x.png);
+    }
+}
 
+Trocando a imagem dependendo do tamanho da tela: 
+.foto {
+    background-image: url(foto-recorte.png);
+}
+@media (min-width: 800px) {
+    .foto {
+        background-image: url(foto-full.png);
+    }
+}
 
+Não é bom usar Frameworks que deixam a img responsiva. Pois são mais pesados
+Alternativa: 
+<img src="logo.png" srcset="logohd.png 2x, logo.png 1x"> //valor do device pixel ratio
 
+Não está implementada em todos browsers
+<picture>
+  <source media="(min-width: 600px)" src="completa.jpg">
+  <source media="(min-width: 1000px)" src="grande.jpg">
+  <source src="recorte.jpg">
+  <img src="fallbackjpg">
+</picture>
 
+Uma solução pra nao ter que ficar criando várias imagens p cada cenário, fazemos assim: 
+Monstrando uma imagem com performace: 
+Se utilizarmos uma imagem para telas de retina de baixa resolução, ela será usada em dois cenários diferentes:
+Em uma tela de retina propriamente dita, ocupando 1000px x 1000px. Porém, lembremos que os pixeis físicos são muito 
+pequenos nessa tela e, ao usarmos uma imagem de qualidade baixa, mas com pixeis muito pequenos, o resultado visual é muito bom.
+Em uma telas normais, ocupando 1000px x 1000px. Como tais telas possuem menos pixeis, o navegador compactará a imagem para 500px x 500px,
+ ou seja, teremos mais pixeis do que o necessário. O resultado final é que a imagem também fica boa.
+Perceba que com a técnica de Imagens Compressivas conseguimos utilizar apenas uma imagem em dois casos. Uma imagem grande de qualidade baixa. 
+
+O que é device pixel ratio?
+É quantos pixels físicos ocupa um pixel lógico (o que você usa no CSS). Numa tela retina, 1px no CSS é equivalente a 2x2 pixels físicos. O device pixel ratio é então 2.
+
+Imagens Vetoriais (serve p logotipos, ícones, gráficos) Fazer tudo que der com CSS pois é vetorial
+Há uma limitação no que tange a quantidade de cores 
+
+SVG é a grande solução de gráficos Vetoriais
+Ícones SVG são fáceis de usar e por serem vetoriais ficam bom em toda situação.
+
+ Dicas de UX para mobile
+ Content Parity - não cortar funcionalidades pq está no mobile.
+ 
 

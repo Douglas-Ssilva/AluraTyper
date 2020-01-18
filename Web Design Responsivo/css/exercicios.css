@@ -56,4 +56,94 @@
           width: 33.333%;
       }
   }
-  
+
+  /* max-width. Ou seja, só vale para telas pequenas.*/
+  @media (max-width: 600px){
+  .barra-nav {
+    background: #f0f0f0;
+    padding: 1em;
+    margin: 0;
+    height: 100%;
+    width: 90%;
+    max-width: 320px;
+    position: fixed;
+    z-index: 1; /*ficar sobre a página*/
+    top: 0;
+    left: -90%; /*pensando que o menu nao aparecerá*/
+    transition: left 0.3s ease-out;
+  }
+
+  .menu-ativo .barra-nav {
+    left: 0;
+  }
+
+  .menu-ativo:after { /*Só quando a class menu-ativo estiver sendo mostrada, escurecendo tela de fundo */
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.4);
+  }
+
+  .menu-principal li {
+    padding: 1em 0;
+    width: 100%;
+}
+}
+/*A primeira reação é fazer @media (min-width:600px), mas isso está errado. Como os valores são inclusive, no ponto 600px, as 2 media queries vão ser executadas.*/
+/*Inverso da media query acima*/
+@media not all and (max-width: 600px){
+  .menu-abrir, .menu-fechar {
+    display: none;
+  }
+}
+
+.container {
+  box-shadow: 3px 3px 10px rgba(0,0,0,.3); /*faz container meio que sair*/
+}
+
+
+.menu-abrir,
+.menu-fechar {
+    background: none;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    font-size: 1.6em;
+    text-indent: -999em; /*Tira o text da tag*/
+}
+
+.menu-abrir {
+    height: 0;
+    width:.75em;
+    padding-top:.125em;
+    border-top: .375em double #000;
+    border-bottom: .125em solid #000;
+
+    vertical-align: middle; /*centraliza junto ao logo do site*/
+    margin: 0.5em; 
+    cursor: pointer;   
+}
+
+.menu-fechar {
+    position: relative;
+    height: 1em;
+    width: 1em;
+}
+    .menu-fechar:before {
+        content: '\00D7';
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-indent: 0;
+        cursor: pointer;
+    }
+
+    /*Como o SVG possui tamanho flexível, adicione no CSS o tamanho dele para nossa página:*/
+
+    .logo img {
+        width: 200px;
+    }
