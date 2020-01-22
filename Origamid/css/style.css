@@ -59,7 +59,23 @@ body {
     text-decoration: none;
     font-size: 1.25em; /*conta para saber o em. Pegar px do browser e divido por quantos px quero que a fonte tenha. Ex: Quero 20 px. browser tem 16. 20/16= 1.25em*/
 }
+/* Assim caso mande imprimir do cel, será impresso na forma desktop */
+@media only screen and (max-width: 739px) {
+    .menu-nav {
+        float: none; /* não flutue */
+        clear: both; /* joga lista p baixo da img */
+        padding-top: 10px;
+    }
+    .menu-logo {
+        margin: 0 auto;
+        max-width: 100px;
+        display: block;
+        float: none;
+    }
+}
 
+
+/* Introdução */
 .intro {
     background: url(../img/bg-intro.jpg) no-repeat center center;
     background-size: cover;
@@ -85,6 +101,12 @@ body {
 .intro p {
     font-size: 1.125em;
     font-style: italic;
+}
+
+@media only screen and (max-width: 739px) {
+    .intro {
+        padding: 60px 0;    
+    }
 }
 
 /*Sobre*/
@@ -142,6 +164,25 @@ body {
     text-align: center;
     max-width: 460px; /*deixa responsivo*/
     margin: 20px auto;
+}
+
+@media (min-width: 740px) and (max-width: 980px){ /* 20px da barra de scroll */
+   .sobre-container {
+       max-width: 720px; /* 740px - 20px */
+   }
+   .sobre-item {
+       width: 340px; /* 720 / 2 = 360-20= 340px */
+   }    
+}
+
+@media (max-width: 739px) {
+    .sobre-container {
+        max-width: 300px;
+    }
+    .sobre-item {
+        width: 300px;
+        margin: 0 auto;
+    }
 }
 
 /* Produtos */
@@ -217,6 +258,28 @@ h2.produtos-mineios::before {
     text-align: center;
     padding: 15px 0;
     margin: 20px auto 0 auto;
+}
+
+@media (min-width: 740px) and (max-width: 980px) {
+    .produtos-container {
+        max-width: 720px;
+    }
+    .produtos-item {
+        width: 220px; /* 720 / 3 - 20= 220px */
+    }
+}
+
+@media (max-width: 739px) {
+    .produtos-container {
+        max-width: 300px;
+    }
+    .produtos-item {
+        margin: 0 auto 20px auto;
+    }
+    .produtos-btn {
+        padding: 8px 0;
+        font-size: 1em;
+    }
 }
 
 /* Locais */

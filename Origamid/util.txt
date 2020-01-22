@@ -9,3 +9,6 @@ Altura das divs são definidas de acordo com o conteúdo que está dentro dela
 Só precisamos de clearfix quando todos elementos dentro do container estão flutuando
 
 2-9 Brafé 1 - Puro - Responsivo 1
+1- Definição dos breakpoints 
+Tudo que for acima de 960px nessa caso não preciso me preocupar pois o site foi feito pensando nessa cenário
+
