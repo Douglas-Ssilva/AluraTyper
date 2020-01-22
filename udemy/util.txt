@@ -605,7 +605,71 @@ mouseover - quando entro com o mouse na area do event, executa somente uma vez
 mouseout - quando sai do elemento
 dblclick - 2 clicks, depende da velocidade do click
 
-Seção 4 
+Seção 4 Efeitos
+32 
+.hide('show'); - desaparecerá de forma devagar
+.show('show'); - aparece de forma progressiva
+.show('fast'); - aparece mais rápido
+.toggle('show');
+.fadeIn(); - ao contrario, muda a opacidade do elemento (vai até 1)
+.fadeOut(); - aos poucos vai aumentando a opacidade até que fique invisível  (vai até 0)
+.fadeTo('slow' ,0.5); - especifico até qual opacidade chegará
+.fadeToggle(); - junção do In com out
+
+Efeito slide 
+.slideUp(); -desaparece p cima
+.slideDown(); desce até aparecer
+.slideToggle(); -alterna entre os dois 
+.slideUp('show');
+Efeitos muito usados com hellowbar que  são aquelas barras de promoções que ficam no topo dos sites e-commerce.
+
+Animate
+.animate({
+    'margin-left': 100px,
+    'margin-top': 10,
+    'background': #cecece
+}, 1000); duration
+
+.animate({
+    'margin-left': 100px,
+    'margin-top': 10,
+    'background': #cecece
+}, {
+    duration: 1500,
+    complete: function(){alert('animação finalizou!')},
+    start: function(){alert('Começou')},
+    step: function(){alert('é chamada a cada px alterado')}
+}); 
+
+Como animar uma animação no meio de um processo? 
+.stop(); - para a animação
+
+Como somar / subtrair propriedades na animação? Sempre que clicar, pegará a posição atual e somará mais 50
+.animate({
+    'margin-left': '+=50' 
+}, 1000); duration
+
+Ajax (requisições assincronas, não possuem sincronismo, são request aleatórias)
+Formas de enviar form: 
+GET - as info aparecem junto a url
+POST - envia por debaixo dos panos
+
+XHR no console do chrome filtro somente request ajax
+Métodos auxiliares
+.load('file.html'); - insere o conteúdo do file.html no elemento
+$.get('file.html', function(data){
+    $('div').html(data);
+});
+$.post('file.html', function(data){
+    $('div').html(data);
+});
+
+Submite no form:
+$('#form').bind('submit', function(e){
+    e.preventDefault(); //p ser enviado via ajax
+    var valoresFormatados = $(this).serialize();
+});
+
 
 
 

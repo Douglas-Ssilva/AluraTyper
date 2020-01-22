@@ -1,0 +1,353 @@
+* {
+    box-sizing: border-box; /*Assim nao preciso fazer o calculo de width, pois existe o box-model que joga meu width p cima. Add toda border e padding ao width declarados aqui*/
+}
+
+/* Reset */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, serif  ;
+    color: #252525;
+}
+
+/* Menu */
+.menu {
+    background: #252525;
+    padding: 20px 0;
+    border-bottom: 0.2px solid #fff;
+    border-top: 0.2px solid #fff;
+}
+
+.menu-nav {
+    float: right;
+    margin-right: 10px;
+}
+
+.menu-nav a {
+    text-decoration: none;    
+    color: #fff;   
+    padding: 10px;
+    font-size: 1.125em;    
+}
+
+.menu-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.menu-logo {
+    display: block;
+    margin-left: 10px; 
+    float: left;
+}
+.menu-nav li {
+    display: inline-block;
+}
+
+.menu-container::after, .menu-container::before {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* Intro */
+
+.intro {
+    background: url(../img/bg-intro.jpg) no-repeat center center;    
+    padding: 100px 0;
+    background-size: cover;
+    color: #fff;
+    text-align: center;   
+}
+
+.intro > h2 {
+    font-size: 2.2em;
+    text-transform: uppercase;    
+    text-align: center;
+}
+
+.intro > h2::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 4px;
+    margin: 10px auto;
+    background: #fff;
+}
+
+.intro > p {    
+    font-size: 1.125em;
+    font-style: italic;
+}
+
+/* Sobre */
+
+.sobre {
+    padding: 50px 0;
+  
+}
+
+.sobre > h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.9em;
+}
+
+.sobre-container {
+    max-width: 960px;
+    margin: 0 auto;
+    /*background: red;    */
+}
+
+.sobre > p {  
+    margin: 0 auto;
+    max-width: 450px;
+    font-style: italic;
+    line-height: 1.4em;
+    font-size: 1.125em;
+}
+
+.sobre-item > img {
+    display: block;
+}
+
+.sobre-item {
+    float: left;
+    max-width: 460px;
+    margin: 0 10px;
+}
+
+.sobre-item2 {
+    float: right;
+}
+
+.sobre-container::after, .sobre-container::before {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.sobre-container h3 {
+    font-size: 1.7em;
+    padding: 0 10px;
+    max-width: 140px;
+    color: #fff;
+    background: #252525;
+    line-height: 1.4em;
+    top: -25px;
+    z-index: 5;
+    position: relative;
+}
+
+/* Produtos */
+.produtos {    
+    background: #e7e4d8;
+    border-top: 3px solid #d6d3c8;
+    border-bottom: 3px solid #d6d3c8;
+}
+
+.produtos-container {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 20px 0;    
+}
+
+.produto-item > h3 {
+    text-align: center;
+    font-size: 1.7em;    
+}
+
+.produto-item {
+    max-width: 300px;
+    float: left;
+    margin: 0 10px 20px 10px; /*colocando margin tbm quando os item forem um p debaixo do outro*/
+}
+
+.produtos-container::after, .produtos-container::before {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.produtos > a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.3em;
+    border: 2px solid #000;
+    padding: 8px 13px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    max-width: 150px;
+    font-weight: bold;
+}
+
+.produto-item h3::before {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: currentColor;
+    border-radius: 50%;
+    margin: 20px auto;
+    border: 5px solid #e7e4d8;
+    box-shadow: 0 0 0 10px currentColor; /*Cria o circle em volta. Poderia encadear outros valores depois do blue, aumentando p 15 px que formaria mais um circle*/
+}
+
+
+h3.produto-paulista::before {
+    color: #492901;
+}
+h3.produto-carioca::before {
+    color: #c17139;
+}
+h3.produto-mineiro::before {
+    color: #d7a54d;
+}
+
+
+/* Lugares */
+.lugares {
+    margin: 0 auto;
+    max-width: 960px;    
+    padding: 70px 0;
+}
+
+.lugar-item {
+    max-width: 460px;
+    float: left;
+    margin: 0 10px;
+}
+
+.lugares-container {
+    padding: 10px 0;
+}
+
+.lugares-container > img {
+    float: left;
+    max-width: 460px;
+    display: block; /*tira margin default da img*/
+}
+
+.lugares-container::after, .lugares-container::before {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.lugar-item > p {
+    line-height: 1.4em;
+    font-style: italic;
+    padding: 15px 0;
+}
+
+.lugar-item > a {
+    text-decoration: none;
+    font-size: 1.2em;
+    font-style: italic;
+    border: 3px solid #000;
+    color: #000;   
+    padding: 5px 12px;    
+}
+
+.lugar-item > h2 {
+    font-size: 2.0em;
+}
+
+
+/* Promoções */
+.promocoes {
+    margin: 20px 0 0 0;
+    background: #e7e4d8;
+    padding: 30px 0;
+}
+
+.promocoes-container {
+    margin: 10px auto;
+    max-width: 960px;    
+}
+
+.promocoes-revista > h3 {
+    line-height: 1.4em;
+    font-size: 1.6em;
+}
+
+.promocoes-revista > p {
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+.promocoes-revista {
+    float: left;
+    width: 460px;
+}
+
+.promocoes-container::after, .promocoes-container::before {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.promocoes-container form {
+    width: 460px;
+    margin: 10px 10px 0 10px;
+    float: left;
+}
+
+.promocoes-container input[type='text'] {
+    background: #e7e4d8;
+    padding: 10px;
+    border: 3px solid #000;
+    font-size: 1.5em;
+    font-style: italic;
+    font-family: Georgia, serif;
+    width: 320px;
+    float: left;
+}
+
+.promocoes-container button {    
+    color: #fff;
+    background: #000;
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 13px 0;
+    border: none;
+    width: 140px;
+    text-transform: uppercase;
+    font-family: Georgia, serif;
+}
+
+/* Footer */
+.footer {
+    background: #d6d3c8;
+    padding: 30px 0 0 0;    
+}
+
+.footer-container {
+    max-width: 960px;
+    margin: 0 auto;    
+}
+
+.footer-container > p {
+    max-width: 350px;
+    font-size: 1em;
+    line-height: 1.4em;
+    float: left;    
+}
+.footer-container > img {
+    float: right;
+    margin: 10px 20px 0 0;
+    display: block;
+}
+
+.footer-container::after, .footer-container::before {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+

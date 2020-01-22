@@ -7,3 +7,5 @@ pai nao alinha pois pega 100% da page) que com ela consigo ter controle sobre o 
 
 Altura das divs são definidas de acordo com o conteúdo que está dentro dela
 Só precisamos de clearfix quando todos elementos dentro do container estão flutuando
+
+2-9 Brafé 1 - Puro - Responsivo 1
