@@ -61,16 +61,16 @@ body {
 }
 /* Assim caso mande imprimir do cel, será impresso na forma desktop */
 @media only screen and (max-width: 739px) {
+    .menu {
+        text-align: center;
+    }
     .menu-nav {
         float: none; /* não flutue */
         clear: both; /* joga lista p baixo da img */
         padding-top: 10px;
     }
     .menu-logo {
-        margin: 0 auto;
-        max-width: 100px;
-        display: block;
-        float: none;
+        float: none;        
     }
 }
 
@@ -335,6 +335,51 @@ h2.produtos-mineios::before {
     color: #252525;
 }
 
+@media (min-width: 740px) and (max-width: 980px){
+    .locais { 
+        max-width: 720px;
+    }
+    .locais-item > img, .locais-item > div {
+        width: 340px;
+        margin: 0;
+    }
+    .locais-item > img{
+        margin: 0 13px 0 0 ;
+    }
+    .locais-item p {
+        line-height: 1.2em;
+        margin-bottom: 31px; 
+    }
+    .locais-item h2 {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }    
+}
+
+@media (max-width: 739px) {
+    .locais {
+        padding: 10px 0;
+        max-width: 300px;
+    }
+    .locais-item > img, .locais-item > div {
+        width: 300px;
+        margin: 0 auto;       
+    }
+    .locais-item a {
+        padding: 7px 15px;
+        border: 2px solid;
+        font-size:  1em;
+    }
+    .locais-item p {
+        line-height: 1.2em;
+        margin-bottom: 15px; 
+    }
+    .locais-item h2 {
+        font-size: 1.8em;
+        margin-bottom: 5px;
+    }  
+}
+
 /* Assine */
 .assine {
     background: #e7e4d8;
@@ -400,6 +445,45 @@ h2.produtos-mineios::before {
     cursor: pointer;
  }
 
+ @media (min-width: 740px) and (max-width: 980px) {
+    .assine-container {
+        max-width: 720px;
+    }
+    .assine-info, .assine form, .assine input {
+        width: 340px;
+    } 
+ }
+
+ @media (max-width: 739px) {
+    .assine-container {
+        max-width: 300px;
+    }
+    .assine-info, .assine form {
+        width: 320px;        
+    }
+    .assine-info h2 { 
+        font-size: 2em;
+     }
+     .assine-info p { 
+        font-size: 1.2em;
+        font-style: italic;
+        margin-bottom: 5px;
+     }
+     .assine input {   
+        width: 250px;
+        border: 2px solid #252525;
+        padding: 10px 0;
+        font-size: 1.2em;
+     }
+     .assine button {
+        width: 120px;
+        padding: 9px 0;
+        font-size: 1.3em;
+        margin: 0 auto;            
+        margin-top: 10px;             
+     }    
+ }
+
  /*Footer*/
 
  .footer {
@@ -432,8 +516,20 @@ h2.produtos-mineios::before {
     clear: both;
 }
 
-
-
+@media (max-width: 739px) {
+    .footer-container {
+        max-width: 360px;
+    }
+    .footer img {
+        float: none;
+        margin: 0 auto;
+    }
+    .footer p {
+        line-height: 1.3em;
+        margin: 0 0 20px 0;
+        font-size: 1.11em;
+    }
+ }
 
 
 

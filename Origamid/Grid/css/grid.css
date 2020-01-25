@@ -1,0 +1,70 @@
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.container::after, .container::before {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.grid1, .grid2, .grid3, .grid4, .grid5, .grid6, .grid7, .grid8, .grid9, .grid10, .grid11, .grid12 {    
+    margin-left: 10px;
+    margin-right: 10px;
+    display: block;
+    float: left;
+    min-height: 1px; /* p elemento existir ainda que não tenha conteúdo */
+}
+
+/* 100 / 12 * 1 */
+.grid1 {
+    width: calc(8.333% - 20px); /* Tirando margin da barra de rolagem */   
+}
+/* 100 / 12 * 2 */
+.grid2 {
+    width: calc(16.666% - 20px);   
+}
+/* 100 / 12 * 3 */
+.grid3 {
+    width: calc(25% - 20px);   
+}
+.grid4 {
+    width: calc(33.333% - 20px);   
+}
+.grid5 {
+    width: calc(41.666% - 20px);   
+}
+.grid6 {
+    width: calc(50% - 20px);   
+}
+.grid7 {
+    width: calc(58.333% - 20px);   
+}
+.grid8 {
+    width: calc(66.666% - 20px);   
+}
+.grid9 {
+    width: calc(75% - 20px);   
+}
+.grid10 {
+    width: calc(83.333% - 20px);   
+}
+.grid11 {
+    width: calc(8.333% - 20px);   
+}
+.grid12 {
+    width: calc(8.333% - 20px);    
+}
+
+@media (max-width: 739px) {
+    .container {
+        max-width: 300px;
+    }
+    .grid1, .grid2, .grid3, .grid4, .grid5, .grid6, .grid7, .grid8, .grid9, .grid10, .grid11, .grid12 {    
+        margin-left: 0px;
+        margin-right: 0px;        
+        float: none;   
+        width: 100%;
+    }
+}

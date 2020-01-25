@@ -12,3 +12,5 @@ Só precisamos de clearfix quando todos elementos dentro do container estão flu
 1- Definição dos breakpoints 
 Tudo que for acima de 960px nessa caso não preciso me preocupar pois o site foi feito pensando nessa cenário
 
+Fazer a parte do responsivo no index2.html
+

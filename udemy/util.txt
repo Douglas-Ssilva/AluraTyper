@@ -670,11 +670,64 @@ $('#form').bind('submit', function(e){
     var valoresFormatados = $(this).serialize();
 });
 
-44
+Melhor forma de fazer request ajax:?
 
+$('#form').bind('submit', function(e){
+    e.preventDefault();
+    var valoresFormatados = $(this).serialize();
 
+    $.ajax({
+        type: 'POST',
+        url: 'localhost:8080/Teste'
+        data: valoresFormatados,
+        success: function(dados){
+            alert('Return: ' + dados)
+        },
+        error: function(){
+            alert('Error')
+        }
+    });
+});
 
+Recebendo e Manipulando Json
 
+$('#form').bind('submit', function(e){
+    e.preventDefault(); 
+    var valoresFormatados = $(this).serialize();
+
+    $.ajax({
+        type: 'POST',
+        url: 'localhost:8080/Teste'
+        data: valoresFormatados,
+        dataType:'json',
+        success: function(json){
+            alert('Nome: ' + json.nome)
+        }
+    });
+});
+
+Como usar um Plugin jQuery?
+maskPlugin -> IgorEscobar.github.io/jQuery-Mask-Plugin
+Baixar Zip clone or donwload, pega file .js dentro de src normalmente
+No Html, devemos colocar primeiro o script do jquery, depois do plugin, depois seu script
+
+Estrutura p criação de plugin: 
+(function($){
+
+    $.fn.mudaCor = function(cor){
+        this.each(function(){
+            $(this).css('color', cor);
+        });
+        return this;
+    } 
+
+}(jQuery));
+
+File js que usará o plugin: 
+
+$(function(){
+    $('a').mudaCor('#000');
+});
 
 
 

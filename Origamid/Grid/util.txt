@@ -1,0 +1,3 @@
+Com o sistema de Grid isolo a class container por exemplo assim nao preciso de colocar max-width em cada elemento
+
+Todo elemento que no site desktop tiver width maior que o container do mobile, temos que diminuí-lo
