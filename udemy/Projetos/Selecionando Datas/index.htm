@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selecionador de datas</title>
+
+    <style>
+        #divHour {
+            background: #cecece;
+            padding: 10px;
+            max-width: 220px;
+            position: absolute;
+            display: none;
+        }
+        #divHour > button {
+            cursor: pointer;
+        }
+        #divHour > button:hover {
+            background: #fff;
+            color: #000;
+            box-shadow: 5px 5px 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <label>Hour 1</label> <br />
+    <input type="text">   <br />
+    <label>Hour 2</label> <br />
+    <input type="text">   <br />
+    <label>Hour 3</label> <br />
+    <input type="text">   <br />
+    <label>Hour 4</label> <br />
+    <input type="text">   <br />
+
+    <div id="divHour">
+        <button>10:00</button>
+        <button>11:00</button>
+        <button>12:00</button>
+        <button>13:00</button>
+    </div>
+
+    <br />
+    <br />
+
+    <table border="2">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Jose</td>
+                <td><input type="text" class="money"></td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td><input type="text" class="money"></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total:  <input type="text" class="total"> </td>                
+            </tr>
+        </tfoot>
+
+    </table>
+    
+    <script src="../../js/jquery-3.1.1.min.js"></script>
+    <script src="./js/script-money.js"></script>
+    <!--<script src="./js/script.js"></script>-->
+</body>
+</html>
