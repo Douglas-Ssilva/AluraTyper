@@ -1,6 +1,7 @@
 var total= 0;
 $(function(){
-    $('.money').bind('keyup', function(){        
+    $('.money').bind('keyup paste', function(){    
+        this.value = this.value.replace(/[^0-9]/g, '');    
         total= getTotalInputs();     
         total= numberToReal(total);    
         $('.total').val(total);    
