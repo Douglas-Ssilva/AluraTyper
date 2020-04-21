@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+        
+    }
+
+    .c-loader {
+        animation: is-rotating 1s infinite;
+        border: 6px solid #e5e5e5;
+        border-radius: 50%;
+        border-top-color: #51d4db;
+        height: 50px;
+        width: 50px;
+    }
+
+    @keyframes is-rotating {
+        to {
+            transform: rotate(1turn);
+        }
+    }
+</style>
+
+<body>
+    <div class="c-loader"></div>
+</body>
+
+</html>

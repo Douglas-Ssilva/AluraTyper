@@ -1,0 +1,390 @@
+div#bhm_profile_mobile_bar {
+    background-color: #2c2c2c;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    z-index: 30
+  }
+  
+  @media screen and (max-width:575px) {
+    div#bhm_profile_mobile_bar {
+      height: 50px
+    }
+  }
+  div#bhm_profile_mobile_bar .intro-mobile-bar {
+    float: left;
+    width: 100%
+  }
+  
+  div#bhm_profile_mobile_bar .intro-mobile-bar .column.is-active path.fill-color,
+  div#bhm_profile_mobile_bar .intro-mobile-bar .column.is-active svg text.fill-color {
+    color: #ab7317;
+    fill: #ab7317
+  }
+  
+  div#bhm_profile_mobile_bar .intro-mobile-bar .column .tab-mobile-bar {
+    display: inline-block;
+    padding-top: 3px
+  }
+  
+  div#bhm_profile_mobile_bar .intro-mobile-bar .column .tab-mobile-bar .svg-mobile-bar-size {
+    height: 70px;
+    width: 70px
+  }
+  
+  @media screen and (max-width:575px) {
+    div#bhm_profile_mobile_bar .intro-mobile-bar .column .tab-mobile-bar .svg-mobile-bar-size {
+      height: auto;
+      width: 13vw
+    }
+  }
+
+  @media screen and (min-width:1024px) {
+    .is-hidden-desktop {
+      display: none!important
+    }
+    .is-invisible-desktop {
+      visibility: hidden!important
+    }
+  }
+  
+  @media screen and (min-width:1024px) and (max-width:1215px) {
+    .is-hidden-desktop-only {
+      display: none!important
+    }
+    .is-invisible-desktop-only {
+      visibility: hidden!important
+    }
+  }
+
+  div#bhm_profile_mobile_bar .intro-mobile-bar {
+    float: left;
+    width: 100%
+  }
+  
+  div#bhm_profile_mobile_bar .intro-mobile-bar .column.is-active path.fill-color,
+  div#bhm_profile_mobile_bar .intro-mobile-bar .column.is-active svg text.fill-color {
+    color: #ab7317;
+    fill: #ab7317
+  }
+  
+  div#bhm_profile_mobile_bar .intro-mobile-bar .column .tab-mobile-bar {
+    display: inline-block;
+    padding-top: 3px
+  }
+  
+  div#bhm_profile_mobile_bar .intro-mobile-bar .column .tab-mobile-bar .svg-mobile-bar-size {
+    height: 70px;
+    width: 70px
+  }
+  
+  @media screen and (max-width:575px) {
+    div#bhm_profile_mobile_bar .intro-mobile-bar .column .tab-mobile-bar .svg-mobile-bar-size {
+      height: auto;
+      width: 13vw
+    }
+  }
+
+  .container {
+    margin: 0 auto;
+    position: relative
+  }
+  
+  @media screen and (min-width:1024px) {
+    .container {
+      max-width: 960px;
+      width: 960px
+    }
+    .container.is-fluid {
+      margin-left: 32px;
+      margin-right: 32px;
+      max-width: none;
+      width: auto
+    }
+  }
+  
+  @media screen and (max-width:1215px) {
+    .container.is-widescreen {
+      max-width: 1152px;
+      width: auto
+    }
+  }
+  
+  @media screen and (max-width:1407px) {
+    .container.is-fullhd {
+      max-width: 1344px;
+      width: auto
+    }
+  }
+  
+  @media screen and (min-width:1216px) {
+    .container {
+      max-width: 1152px;
+      width: 1152px
+    }
+  }
+  
+  @media screen and (min-width:1408px) {
+    .is-invisible-fullhd {
+      visibility: hidden!important
+    }
+    .container {
+      max-width: 1344px;
+      width: 1344px
+    }
+  }
+
+  .navbar>.container {
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 3.25rem;
+    width: 100%
+  }
+
+  @media screen and (max-width:1023px) {
+    .navbar>.container {
+      display: block
+    }
+    .navbar-brand .navbar-item,
+    .navbar-tabs .navbar-item {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex
+    }
+    .navbar-menu {
+      background-color: #fff;
+      -webkit-box-shadow: 0 8px 16px rgba(10, 10, 10, .1);
+      box-shadow: 0 8px 16px rgba(10, 10, 10, .1);
+      padding: .5rem 0
+    }
+    .navbar-menu.is-active {
+      display: block
+    }
+    .navbar.is-fixed-bottom-touch,
+    .navbar.is-fixed-top-touch {
+      left: 0;
+      position: fixed;
+      right: 0;
+      z-index: 30
+    }
+    .navbar.is-fixed-bottom-touch {
+      bottom: 0
+    }
+    .navbar.is-fixed-bottom-touch.has-shadow {
+      -webkit-box-shadow: 0 -2px 3px rgba(10, 10, 10, .1);
+      box-shadow: 0 -2px 3px rgba(10, 10, 10, .1)
+    }
+    .navbar.is-fixed-top-touch {
+      top: 0
+    }
+    .navbar.is-fixed-top .navbar-menu,
+    .navbar.is-fixed-top-touch .navbar-menu {
+      -webkit-overflow-scrolling: touch;
+      max-height: calc(100vh - 3.25rem);
+      overflow: auto
+    }
+    html.has-navbar-fixed-top-touch {
+      padding-top: 3.25rem
+    }
+    html.has-navbar-fixed-bottom-touch {
+      padding-bottom: 3.25rem
+    }
+  }
+
+    .container>.navbar .navbar-brand,
+  .navbar>.container .navbar-brand {
+    margin-left: -1rem
+  }
+  .container>.navbar .navbar-menu,
+  .navbar>.container .navbar-menu {
+    margin-right: -1rem
+  }
+
+  .container>.navbar .navbar-brand,
+  .navbar>.container .navbar-brand {
+    margin-left: -1rem
+  }
+
+  .container>.navbar .navbar-menu,
+  .navbar>.container .navbar-menu {
+    margin-right: -1rem
+  }
+
+  .hero.is-fullheight .hero-body>.container,
+.hero.is-halfheight .hero-body>.container {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1
+}
+
+.easy-autocomplete-container {
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 2
+  }
+  
+  .easy-autocomplete-container ul {
+    background: none repeat scroll 0 0 #fff;
+    border-top: 1px dotted #ccc;
+    display: none;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    position: relative;
+    top: -1px
+  }
+  
+  .easy-autocomplete-container ul .eac-category,
+  .easy-autocomplete-container ul li {
+    background: inherit;
+    border-color: #ccc;
+    border-image: none;
+    border-style: solid;
+    border-width: 0 1px;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 4px 12px
+  }
+  
+  .easy-autocomplete-container ul li:last-child {
+    border-radius: 0 0 2px 2px;
+    border-width: 0 1px 1px
+  }
+  
+  .easy-autocomplete-container ul li.selected {
+    background: none repeat scroll 0 0 #ebebeb;
+    cursor: pointer
+  }
+  
+  .easy-autocomplete-container ul li.selected div {
+    font-weight: 400
+  }
+  
+  .easy-autocomplete-container ul li div {
+    display: block;
+    font-weight: 400;
+    word-break: break-all
+  }
+  
+  .easy-autocomplete-container ul li b {
+    font-weight: 700
+  }
+  
+  .easy-autocomplete-container ul .eac-category {
+    font-color: #aaa;
+    font-style: italic
+  }
+
+  .fancybox-container {
+    -webkit-backface-visibility: hidden;
+    height: 100%;
+    left: 0;
+    outline: 0;
+    position: fixed;
+    -webkit-tap-highlight-color: transparent;
+    top: 0;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    width: 100%;
+    z-index: 99992
+  }
+  
+  .fancybox-container * {
+    box-sizing: border-box
+  }
+
+  .fancybox-container [data-selectable=true] {
+    cursor: text
+  }
+  .slider-container {
+    width: 300px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+  }
+  
+  .slider-container .back-bar {
+    height: 10px;
+    position: relative
+  }
+  
+  .slider-container .back-bar .selected-bar {
+    position: absolute;
+    height: 100%
+  }
+  
+  .slider-container .back-bar .pointer {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    cursor: col-resize;
+    opacity: 1;
+    z-index: 2
+  }
+  
+  .slider-container .back-bar .pointer.last-active {
+    z-index: 3
+  }
+  
+  .slider-container .back-bar .pointer-label {
+    position: absolute;
+    top: -17px;
+    font-size: 8px;
+    background: #fff;
+    white-space: nowrap;
+    line-height: 1
+  }
+  
+  .slider-container .back-bar .focused {
+    z-index: 10
+  }
+  
+  .slider-container .clickable-dummy {
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1
+  }
+  
+  .slider-container .scale {
+    top: 2px;
+    position: relative
+  }
+  
+  .slider-container .scale span {
+    position: absolute;
+    height: 5px;
+    border-left: 1px solid #999;
+    font-size: 0
+  }
+  
+  .slider-container .scale ins {
+    font-size: 9px;
+    text-decoration: none;
+    position: absolute;
+    left: 0;
+    top: 5px;
+    color: #999;
+    line-height: 1
+  }
+  
+  .slider-container.slider-readonly .clickable-dummy,
+  .slider-container.slider-readonly .pointer {
+    cursor: auto
+  }  
