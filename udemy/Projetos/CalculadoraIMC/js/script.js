@@ -1,8 +1,29 @@
 $(function(){
     $('#btn').bind('click', obterValores);
-    $('#peso').mask("#0,00", {reverse: true});
+    $('#peso').mask("#.##0,00", {reverse: true});
     $('#altura').mask("#0,00", {reverse: true});
+    $('.teste').mask("#.##0,00", {reverse : true});
 });
+
+function calculateAmount() {
+    var total = 0;
+    $('.teste').each(function() {        
+        var valor = $(this).val();
+        valor= valor.replace(/\.|/g, '');
+        var valor = parseFloat(valor);
+        if (valor > 0) {
+            total = total + valor;
+        }
+    });    
+    $('.total').val(total); 
+    formatar();
+}
+
+function formatar(){
+    var valor = parseFloat($('.total').val());  
+    var valorF = valor.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+    $('.total').val(valorF);  
+}
 
 function obterValores(){
     var altura= $('#altura').val();
