@@ -19,6 +19,20 @@ function calculateAmount() {
     formatar();
 }
 
+function disabledButton(){
+    var listCheck = [];
+    $('.ch').map(function(){
+        listCheck.push(this.checked);
+    });
+   var indexTrue=  listCheck.indexOf(true);
+   if(indexTrue !== -1){
+        $('#button').attr('disabled', false).css('cursor', 'pointer');
+        console.log('show de bola');
+   }else{
+        $('#button').attr('disabled', true).css('cursor', 'default');
+   }
+}
+
 function formatar(){
     var valor = parseFloat($('.total').val());  
     var valorF = valor.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
